@@ -8,19 +8,19 @@
 
 ---
 
-## 0) 데이터 획득 정책 (가장 중요)
+## 0) 데이터 다운로드 정책 (가장 중요)
 
-평가를 시작하기 전에, 데이터 획득 경로가 태스크별로 다릅니다.
+평가를 시작하기 전에, 데이터 다운로드 경로가 태스크별로 다릅니다.
 
 - `ASR`, `Translation`:
   - 이 두 태스크는 전처리 코드가 포함되어 있으며, **반드시 원본 데이터 제작자/배포처에서 직접 다운로드**해야 합니다.
   - 관련 전처리 스크립트는 `ASR/preprocess_korean_asr.py`, `Translation/preprocess_korean_asr.py` 등을 참고하세요.
   - 세부 전처리/실행 가이드는 `ASR/README.md`, `Translation/README.md`를 우선 참고하세요.
-  - 특히 `ASR/ksponspeech_eval_clean.jsonl`, `ASR/ksponspeech_eval_other.jsonl`은 **직접 전처리로 생성해야 하는 로컬 산출물**이며 `.gitignore`에 포함되어 있습니다.
+  - 특히, `ASR/ksponspeech_eval_clean.jsonl`, `ASR/ksponspeech_eval_other.jsonl`은 **직접 전처리** 해야합니다.
 - 그 외 태스크(`SQA`, `K-SAT`, `PA-QA`, `SCA-QA`, `Instruct`):
   - **Hugging Face에 업로드된 데이터에서 다운로드**해 사용해야 합니다.
 
-> 요약: `ASR/Translation = 원본 소스에서 직접 다운로드`, `나머지 = Hugging Face 다운로드`
+> 정리: `ASR/Translation = 원본 소스에서 직접 다운로드`, `나머지 = Hugging Face 다운로드`
 
 ### Data Access Policy (Most Important)
 

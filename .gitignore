@@ -5,3 +5,7 @@ openai_key.txt
 # Local helper scripts (do not commit)
 scripts/evaluation/gemini-flash/run_all_1sample.sh
 scripts/evaluation/gemini-flash/smoke_test_paths.sh
+
+# Locally generated ASR preprocessing outputs (must be built from original source data)
+ASR/ksponspeech_eval_clean.jsonl
+ASR/ksponspeech_eval_other.jsonl

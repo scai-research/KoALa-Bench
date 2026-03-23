@@ -1,0 +1,1 @@
+{"index": "000000", "audio_path": "audio_noise/commonVoice_noise/common_voice_ko_40370298_noisy.mp3", "ground_truth": "그것은 마치 야반의 종소리와도 같이 사람의 마음을 무겁고 음침하게 하는 음향인 동시에", "prediction": "", "gt_normalized": "그것은마치야반의종소리와도같이사람의마음을무겁고음침하게하는음향인동시에", "pred_normalized": "", "cer": 1.0, "edit_distance": 36, "ref_length": 36, "note": "audio_missing"}

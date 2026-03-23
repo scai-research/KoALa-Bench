@@ -1,0 +1,7 @@
+# Local API keys
+gemini_key.txt
+openai_key.txt
+
+# Local helper scripts (do not commit)
+scripts/evaluation/gemini-flash/run_all_1sample.sh
+scripts/evaluation/gemini-flash/smoke_test_paths.sh

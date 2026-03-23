@@ -1,0 +1,112 @@
+# ============================================================
+# Ko-Speech-Eval: 태스크별 프롬프트 설정
+# ============================================================
+# 각 태스크마다 4개의 프롬프트 변형을 정의 (전부 한국어).
+# 평가 스크립트에서 --prompt-file 로 이 파일을 지정하면
+# 모든 변형으로 평가 후 최적 결과를 자동 선택.
+# ============================================================
+
+# --- ASR (Automatic Speech Recognition) ---
+asr:
+  - name: v1
+    prompt: "주어진 음성을 한국어로 전사하고 전사된 한국어 텍스트만 출력해 주세요."
+  - name: v2
+    prompt: "다음 음성을 한국어로 전사해 주시고 설명이나 추가 문장 없이 전사 결과만 제공해 주세요."
+  - name: v3
+    prompt: "제공된 음성의 내용을 한국어로 정확하게 전사해 주시고 전사된 문장만 출력해 주세요."
+  - name: v4
+    prompt: "맥락으로 주어진 음성을 한국어로 전사해 주시되 다른 설명 없이 전사된 한국어 텍스트만 응답해 주세요."
+
+# --- SQA (Spoken Question Answering) ---
+# prompt_prefix: 선택지 앞에 붙는 지시문 (null이면 JSONL의 prompt 필드 또는 기본값 사용)
+# answer_suffix: 선택지 뒤에 붙는 답 유도 구절
+sqa:
+  - name: v1
+    prompt_prefix: "다음 음성을 듣고 질문에 맞는 답을 고르세요.\n\n예시:\n질문: 철수는 어디에서 친구를 만났나요?\n(A) 학교 (B) 공원 (C) 도서관 (D) 카페\n답: (B)\n\n"
+    answer_suffix: "\n답: "
+  - name: v2
+    prompt_prefix: "주어진 음성을 듣고 가장 적절한 답을 선택하세요.\n\n예시:\n질문: 철수는 어디에서 친구를 만났나요?\n(A) 학교 (B) 공원 (C) 도서관 (D) 카페\n답: (B)\n\n"
+    answer_suffix: "\n답: "
+  - name: v3
+    prompt_prefix: "음성을 잘 듣고 알맞은 답을 골라 주세요.\n\n예시:\n질문: 철수는 어디에서 친구를 만났나요?\n(A) 학교 (B) 공원 (C) 도서관 (D) 카페\n답: (B)\n\n"
+    answer_suffix: "\n답: "
+  - name: v4
+    prompt_prefix: "아래 음성의 내용을 참고하여 올바른 답을 선택하세요.\n\n예시:\n질문: 철수는 어디에서 친구를 만났나요?\n(A) 학교 (B) 공원 (C) 도서관 (D) 카페\n답: (B)\n\n"
+    answer_suffix: "\n답: "
+
+# --- Translation (Speech Translation) ---
+translation:
+  - name: v1
+    prompt: "이 오디오를 한국어로 번역해 주세요. 번역 결과만 출력하고 다른 텍스트는 출력하지 마세요."
+  - name: v2
+    prompt: "다음 문장을 의미를 변경하지 말고 자연스러운 한국어로 번역하시오."
+  - name: v3
+    prompt: "다음 영어 문장을 정보의 추가나 삭제 없이 정확하게 한국어로 번역하시오."
+  - name: v4
+    prompt: "다음 문장의 의미를 그대로 유지한 채 한국어로 번역하고 번역 결과만 출력하시오."
+
+# --- Instruct (Instruction Following) ---
+# prompt_prefix: 질문 앞에 붙는 지시문
+instruct:
+  - name: v1
+    prompt_prefix: "음성에서 제시된 질문을 참고해 주시기 바랍니다."
+  - name: v2
+    prompt_prefix: "음성의 정보를 활용하여 다음 질문에 답해 주세요."
+  - name: v3
+    prompt_prefix: "음성을 듣고 다음 질문에 답해 주세요."
+  - name: v4
+    prompt_prefix: "음성 내용을 바탕으로 다음 질문에 답해 주세요."
+
+# --- LSQA (Long Speech QA) ---
+# prompt_prefix: 질문 앞에 붙는 지시문
+# answer_suffix: 선택지 뒤에 붙는 답 유도 구절
+lsqa:
+  - name: v1
+    prompt_prefix: "다음 음성을 듣고 질문에 맞는 답을 고르세요.\n\n예시:\n질문: 철수는 어디에서 친구를 만났나요?\n(A) 학교 (B) 공원 (C) 도서관 (D) 카페\n답: (B)\n\n"
+    answer_suffix: "\n답: "
+  - name: v2
+    prompt_prefix: "주어진 음성을 듣고 가장 적절한 답을 선택하세요.\n\n예시:\n질문: 철수는 어디에서 친구를 만났나요?\n(A) 학교 (B) 공원 (C) 도서관 (D) 카페\n답: (B)\n\n"
+    answer_suffix: "\n답: "
+  - name: v3
+    prompt_prefix: "음성을 잘 듣고 알맞은 답을 골라 주세요.\n\n예시:\n질문: 철수는 어디에서 친구를 만났나요?\n(A) 학교 (B) 공원 (C) 도서관 (D) 카페\n답: (B)\n\n"
+    answer_suffix: "\n답: "
+  - name: v4
+    prompt_prefix: "아래 음성의 내용을 참고하여 올바른 답을 선택하세요.\n\n예시:\n질문: 철수는 어디에서 친구를 만났나요?\n(A) 학교 (B) 공원 (C) 도서관 (D) 카페\n답: (B)\n\n"
+    answer_suffix: "\n답: "
+
+# --- K-SAT (수능 듣기) — SQA와 동일 4개 프롬프트 ---
+ksat:
+  - name: v1
+    prompt_prefix: "다음 음성을 듣고 질문에 맞는 답을 고르세요.\n\n예시:\n질문: 철수는 어디에서 친구를 만났나요?\n(A) 학교 (B) 공원 (C) 도서관 (D) 카페\n답: (B)\n\n"
+    answer_suffix: "\n답: "
+  - name: v2
+    prompt_prefix: "주어진 음성을 듣고 가장 적절한 답을 선택하세요.\n\n예시:\n질문: 철수는 어디에서 친구를 만났나요?\n(A) 학교 (B) 공원 (C) 도서관 (D) 카페\n답: (B)\n\n"
+    answer_suffix: "\n답: "
+  - name: v3
+    prompt_prefix: "음성을 잘 듣고 알맞은 답을 골라 주세요.\n\n예시:\n질문: 철수는 어디에서 친구를 만났나요?\n(A) 학교 (B) 공원 (C) 도서관 (D) 카페\n답: (B)\n\n"
+    answer_suffix: "\n답: "
+  - name: v4
+    prompt_prefix: "아래 음성의 내용을 참고하여 올바른 답을 선택하세요.\n\n예시:\n질문: 철수는 어디에서 친구를 만났나요?\n(A) 학교 (B) 공원 (C) 도서관 (D) 카페\n답: (B)\n\n"
+    answer_suffix: "\n답: "
+
+# --- K-disentQA (Knowledge Disentanglement QA) ---
+# prompt_text_only: 텍스트만 모드 (무음 오디오 + 질문/선택지)
+# prompt_speech: 음성+텍스트 모드 (context 음성 + 질문/선택지)
+# answer_suffix: 선택지 뒤에 붙는 답 유도 구절
+kdisentqa:
+  - name: v1
+    prompt_text_only: "다음 질문에 답변하세요.\n\n예시:\n질문: 철수는 어디에서 친구를 만났나요?\n(A) 학교 (B) 공원 (C) 도서관 (D) 카페\n답: (B)\n\n"
+    prompt_speech: "음성에서 들려준 내용만을 근거로 다음 질문에 답변하세요.\n\n예시:\n질문: 철수는 어디에서 친구를 만났나요?\n(A) 학교 (B) 공원 (C) 도서관 (D) 카페\n답: (B)\n\n"
+    answer_suffix: "\n답: "
+  - name: v2
+    prompt_text_only: "질문에 맞는 답을 고르세요.\n\n예시:\n질문: 철수는 어디에서 친구를 만났나요?\n(A) 학교 (B) 공원 (C) 도서관 (D) 카페\n답: (B)\n\n"
+    prompt_speech: "음성에서 제공된 정보에만 기반하여 질문에 맞는 답을 고르세요.\n\n예시:\n질문: 철수는 어디에서 친구를 만났나요?\n(A) 학교 (B) 공원 (C) 도서관 (D) 카페\n답: (B)\n\n"
+    answer_suffix: "\n답: "
+  - name: v3
+    prompt_text_only: "아래 질문에 가장 적절한 답을 선택하세요.\n\n예시:\n질문: 철수는 어디에서 친구를 만났나요?\n(A) 학교 (B) 공원 (C) 도서관 (D) 카페\n답: (B)\n\n"
+    prompt_speech: "반드시 음성에서 들은 내용을 바탕으로 아래 질문에 가장 적절한 답을 선택하세요.\n\n예시:\n질문: 철수는 어디에서 친구를 만났나요?\n(A) 학교 (B) 공원 (C) 도서관 (D) 카페\n답: (B)\n\n"
+    answer_suffix: "\n답: "
+  - name: v4
+    prompt_text_only: "주어진 선택지 중 올바른 답을 고르세요.\n\n예시:\n질문: 철수는 어디에서 친구를 만났나요?\n(A) 학교 (B) 공원 (C) 도서관 (D) 카페\n답: (B)\n\n"
+    prompt_speech: "음성의 내용만을 참고하여 주어진 선택지 중 올바른 답을 고르세요.\n\n예시:\n질문: 철수는 어디에서 친구를 만났나요?\n(A) 학교 (B) 공원 (C) 도서관 (D) 카페\n답: (B)\n\n"
+    answer_suffix: "\n답: "

@@ -1,0 +1,12 @@
+{
+  "prompts": [
+    {
+      "name": "v1",
+      "prompt_prefix": "다음 음성을 듣고 질문에 맞는 답을 고르세요.\n\n예시:\n질문: 철수는 어디에서 친구를 만났나요?\n(A) 학교 (B) 공원 (C) 도서관 (D) 카페\n답: (B)\n\n",
+      "answer_suffix": "\n답: ",
+      "accuracy_logit": 0.0,
+      "accuracy_generation": 0.0
+    }
+  ],
+  "best": "v1"
+}

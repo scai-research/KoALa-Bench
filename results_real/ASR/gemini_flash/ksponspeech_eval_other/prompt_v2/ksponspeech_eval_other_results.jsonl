@@ -1,0 +1,1 @@
+{"index": "000000", "audio_path": "audio_noise/KsponSpeech_eval/KsponSpeech_E03001.wav", "ground_truth": "그 그래서 혼자 떨어졌을때 유괴범한테 납치를 당한 거고", "prediction": "", "gt_normalized": "그그래서혼자떨어졌을때유괴범한테납치를당한거고", "pred_normalized": "", "cer": 1.0, "edit_distance": 23, "ref_length": 23, "note": "audio_missing"}

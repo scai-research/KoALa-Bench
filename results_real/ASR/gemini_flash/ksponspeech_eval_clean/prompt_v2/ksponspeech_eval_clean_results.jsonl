@@ -1,0 +1,1 @@
+{"index": "000000", "audio_path": "audio/KsponSpeech_eval/KsponSpeech_E00001.wav", "ground_truth": "어 일단은 억지로 과장해서 이렇게 하는 것보다 진실된 마음으로 이걸 어떻게 전달할 수 있을까 공감을 시킬 수 있을까 해서 좀", "prediction": "", "gt_normalized": "어일단은억지로과장해서이렇게하는것보다진실된마음으로이걸어떻게전달할수있을까공감을시킬수있을까해서좀", "pred_normalized": "", "cer": 1.0, "edit_distance": 50, "ref_length": 50, "note": "audio_missing"}

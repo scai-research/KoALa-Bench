@@ -1,0 +1,12 @@
+{
+  "dataset": "ksponspeech_eval_other.jsonl",
+  "model": "gemini-2.5-flash-lite",
+  "total_samples": 1,
+  "total_cer": 1.0,
+  "total_edit_distance": 23,
+  "total_ref_length": 23,
+  "normalization": "구두점 제거 + 공백 제거",
+  "prompt": "다음 음성을 한국어로 전사해 주시고 설명이나 추가 문장 없이 전사 결과만 제공해 주세요.",
+  "elapsed_time_seconds": 0.006785869598388672,
+  "timestamp": "2026-03-23T17:38:50.867669"
+}

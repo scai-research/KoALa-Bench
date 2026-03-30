@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://arxiv.org/abs/xxxx.xxxxx"><img src="https://img.shields.io/badge/Paper-arXiv-red"></a>
   <a href="https://huggingface.co/datasets/scailaboratory/KoALA"><img src="https://img.shields.io/badge/🤗-HuggingFace-yellow"></a>
-  <a href="https://리더보드URL"><img src="https://img.shields.io/badge/🏆-Leaderboard-blue"></a>
+  <a href="http://huggingface.co/spaces/scailaboratory/KoALa-Bench"><img src="https://img.shields.io/badge/🏆-Leaderboard-blue"></a>
 </p>
 
 한국어 음성 기반 모델 평가 저장소입니다.  

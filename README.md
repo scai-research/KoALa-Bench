@@ -1,4 +1,4 @@
-# KoALa-Bench
+# KoALa-Bench: Evaluating Large Audio Language Models on Korean Speech Understanding and Faithfulness 
 
 <p align="center">
   <img src="main_figure.png" width="80%">

@@ -1,0 +1,17 @@
+{
+  "dataset": "etri_tst-HE_processed.jsonl",
+  "model": "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+  "total_samples": 544,
+  "tokenize_method": "character",
+  "corpus_bleu": 34.517882238358965,
+  "corpus_bleu1": 63.00818847866686,
+  "corpus_bleu2": 41.988298343084715,
+  "corpus_bleu3": 29.052791108865875,
+  "corpus_bleu4": 20.326216819905458,
+  "avg_bleu": 31.70803814468474,
+  "avg_meteor": 55.793288969163044,
+  "avg_bertscore_f1": 93.9605957006707,
+  "prompt": "이 오디오를 한국어로 번역해 주세요. 번역 결과만 출력하고 다른 텍스트는 출력하지 마세요.",
+  "elapsed_time_seconds": 89.88898873329163,
+  "timestamp": "2026-03-06T02:16:52.054674"
+}

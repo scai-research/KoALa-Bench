@@ -1,0 +1,34 @@
+{
+  "accuracy_logit": 0.8929663608562691,
+  "accuracy_generation": 0.7767584097859327,
+  "correct_logit": 292,
+  "correct_generation": 254,
+  "total": 327,
+  "total_before_is_valid_filter": 427,
+  "total_is_valid_true": 327,
+  "invalid_gt_count": 0,
+  "evidence_accuracy": {
+    "front": {
+      "accuracy": 0.8768115942028986,
+      "correct": 121,
+      "total": 138
+    },
+    "front-middle": {
+      "accuracy": 0.898876404494382,
+      "correct": 80,
+      "total": 89
+    },
+    "middle-late": {
+      "accuracy": 0.8961038961038961,
+      "correct": 69,
+      "total": 77
+    },
+    "late": {
+      "accuracy": 0.8727272727272727,
+      "correct": 48,
+      "total": 55
+    }
+  },
+  "elapsed_seconds": 205.7588827610016,
+  "predictions_file": "/data/jykim/projects/SpeechLM_benchmark/jykim/Ko-Speech-Eval/results_real/LSQA/voxtral3b/mctest_final_with_audio-add-evidence-7_noise_filtered/lsqa_predictions.jsonl"
+}

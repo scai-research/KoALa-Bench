@@ -1,0 +1,17 @@
+{
+  "dataset": "etri_tst-HE_processed.jsonl",
+  "model": "google/gemma-3n-E4B-it",
+  "total_samples": 544,
+  "tokenize_method": "character",
+  "corpus_bleu": 3.6924855456352437,
+  "corpus_bleu1": 19.298182986470568,
+  "corpus_bleu2": 5.078452073246205,
+  "corpus_bleu3": 2.3173766108367064,
+  "corpus_bleu4": 0.818522869377392,
+  "avg_bleu": 4.075799547918441,
+  "avg_meteor": 18.493461735059565,
+  "avg_bertscore_f1": 86.69528536060277,
+  "prompt": "다음 문장을 의미를 변경하지 말고 자연스러운 한국어로 번역하시오.",
+  "elapsed_time_seconds": 228.36796760559082,
+  "timestamp": "2026-03-06T14:33:03.736561"
+}

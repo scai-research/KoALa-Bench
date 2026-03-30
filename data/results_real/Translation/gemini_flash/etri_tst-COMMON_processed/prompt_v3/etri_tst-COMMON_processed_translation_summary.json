@@ -1,0 +1,17 @@
+{
+  "dataset": "etri_tst-COMMON_processed.jsonl",
+  "model": "gemini-2.5-flash-lite",
+  "total_samples": 1,
+  "tokenize_method": "character",
+  "corpus_bleu": 65.15957568070235,
+  "corpus_bleu1": 70.58823529411765,
+  "corpus_bleu2": 66.66666666666667,
+  "corpus_bleu3": 62.5,
+  "corpus_bleu4": 61.29032258064516,
+  "avg_bleu": 65.15957568070235,
+  "avg_meteor": 89.52632669983417,
+  "avg_bertscore_f1": 96.55201435089111,
+  "prompt": "다음 영어 문장을 정보의 추가나 삭제 없이 정확하게 한국어로 번역하시오.",
+  "elapsed_time_seconds": 11.96442699432373,
+  "timestamp": "2026-03-12T13:04:14.291090"
+}

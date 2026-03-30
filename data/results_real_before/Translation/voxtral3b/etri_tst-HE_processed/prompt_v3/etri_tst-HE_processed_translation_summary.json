@@ -1,0 +1,17 @@
+{
+  "dataset": "etri_tst-HE_processed.jsonl",
+  "model": "mistralai/Voxtral-Mini-3B-2507",
+  "total_samples": 544,
+  "tokenize_method": "character",
+  "corpus_bleu": 0.0,
+  "corpus_bleu1": 0.0,
+  "corpus_bleu2": 0.0,
+  "corpus_bleu3": 0.0,
+  "corpus_bleu4": 0.0,
+  "avg_bleu": 0.0,
+  "avg_meteor": 0.0,
+  "avg_bertscore_f1": 0.0,
+  "prompt": "다음 영어 문장을 정보의 추가나 삭제 없이 정확하게 한국어로 번역하시오.",
+  "elapsed_time_seconds": 4.177568435668945,
+  "timestamp": "2026-03-10T19:14:09.213175"
+}

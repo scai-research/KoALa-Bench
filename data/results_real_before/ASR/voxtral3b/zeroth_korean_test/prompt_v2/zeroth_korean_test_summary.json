@@ -1,0 +1,12 @@
+{
+  "dataset": "zeroth_korean_test.jsonl",
+  "model": "mistralai/Voxtral-Mini-3B-2507",
+  "total_samples": 457,
+  "total_cer": 0.5658440481128163,
+  "total_edit_distance": 10914,
+  "total_ref_length": 19288,
+  "normalization": "구두점 제거 + 공백 제거",
+  "prompt": "다음 음성을 한국어로 전사해 주시고 설명이나 추가 문장 없이 전사 결과만 제공해 주세요.",
+  "elapsed_time_seconds": 107.60283613204956,
+  "timestamp": "2026-03-10T21:06:34.854972"
+}

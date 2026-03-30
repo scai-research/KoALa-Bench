@@ -1,0 +1,12 @@
+{
+  "dataset": "ksponspeech_eval_other.jsonl",
+  "model": "gpt-audio-mini",
+  "total_samples": 3000,
+  "total_cer": 0.636444522236322,
+  "total_edit_distance": 43634,
+  "total_ref_length": 68559,
+  "normalization": "구두점 제거 + 공백 제거",
+  "prompt": "다음 음성을 한국어로 전사해 주시고 설명이나 추가 문장 없이 전사 결과만 제공해 주세요.",
+  "elapsed_time_seconds": 3105.1256999969482,
+  "timestamp": "2026-03-11T20:17:03.811075"
+}

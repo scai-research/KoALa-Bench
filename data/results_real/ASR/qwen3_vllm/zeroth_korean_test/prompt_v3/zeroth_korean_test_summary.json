@@ -1,0 +1,12 @@
+{
+  "dataset": "zeroth_korean_test.jsonl",
+  "model": "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+  "total_samples": 457,
+  "total_cer": 0.034373703857320616,
+  "total_edit_distance": 663,
+  "total_ref_length": 19288,
+  "normalization": "숫자 변형 허용 + 공백 제거",
+  "prompt": "제공된 음성의 내용을 한국어로 정확하게 전사해 주시고 전사된 문장만 출력해 주세요.",
+  "elapsed_time_seconds": 55.551538705825806,
+  "timestamp": "2026-03-06T00:51:30.040571"
+}

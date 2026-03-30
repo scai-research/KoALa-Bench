@@ -1,0 +1,17 @@
+{
+  "dataset": "etri_tst-HE_processed.jsonl",
+  "model": "mistralai/Voxtral-Mini-3B-2507",
+  "total_samples": 544,
+  "tokenize_method": "character",
+  "corpus_bleu": 28.482138904250426,
+  "corpus_bleu1": 57.639620653319284,
+  "corpus_bleu2": 35.21687813514311,
+  "corpus_bleu3": 23.192360163710777,
+  "corpus_bleu4": 15.399002493765586,
+  "avg_bleu": 25.696007486093116,
+  "avg_meteor": 49.59940341365951,
+  "avg_bertscore_f1": 93.08765946942216,
+  "prompt": "다음 문장을 의미를 변경하지 말고 자연스러운 한국어로 번역하시오.",
+  "elapsed_time_seconds": 83.87081813812256,
+  "timestamp": "2026-03-11T00:42:33.688617"
+}

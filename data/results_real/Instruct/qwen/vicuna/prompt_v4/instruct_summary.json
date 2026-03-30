@@ -1,0 +1,8 @@
+{
+  "avg_gpt_score": 0.5814285714285711,
+  "total": 70,
+  "scored": 70,
+  "elapsed_seconds": 53.80234694480896,
+  "predictions_file": "/data/jykim/projects/SpeechLM_benchmark/jykim/Ko-Speech-Eval/results_real/Instruct/qwen/vicuna/prompt_v4/instruct_predictions.jsonl",
+  "gpt_model": "gpt-4o-mini"
+}

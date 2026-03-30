@@ -1,0 +1,12 @@
+{
+  "dataset": "zeroth_korean_test_noisy.jsonl",
+  "model": "gemini-2.5-flash-lite",
+  "total_samples": 457,
+  "total_cer": 0.14558274574865201,
+  "total_edit_distance": 2808,
+  "total_ref_length": 19288,
+  "normalization": "구두점 제거 + 공백 제거",
+  "prompt": "다음 음성을 한국어로 전사해 주시고 설명이나 추가 문장 없이 전사 결과만 제공해 주세요.",
+  "elapsed_time_seconds": 2302.8534002304077,
+  "timestamp": "2026-03-12T12:50:19.843093"
+}

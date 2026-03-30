@@ -1,0 +1,12 @@
+{
+  "dataset": "common_voice_korea_noisy.jsonl",
+  "model": null,
+  "total_samples": 522,
+  "total_cer": 0.38146304098046724,
+  "total_edit_distance": 3984,
+  "total_ref_length": 10444,
+  "normalization": "숫자 변형 허용 + 공백 제거",
+  "prompt": "맥락으로 주어진 음성을 한국어로 전사해 주시되 다른 설명 없이 전사된 한국어 텍스트만 응답해 주세요.",
+  "elapsed_time_seconds": 54.8859429359436,
+  "timestamp": "2026-03-06T05:27:47.696131"
+}

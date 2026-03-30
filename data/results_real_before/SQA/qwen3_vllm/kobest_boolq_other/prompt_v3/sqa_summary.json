@@ -1,0 +1,10 @@
+{
+  "accuracy_logit": 0.5080500894454383,
+  "accuracy_generation": 0.5080500894454383,
+  "correct_logit": 568,
+  "correct_generation": 568,
+  "total": 1118,
+  "invalid_gt_count": 0,
+  "elapsed_seconds": 183.97970294952393,
+  "predictions_file": "/data/jykim/projects/SpeechLM_benchmark/jykim/Ko-Speech-Eval/results_real/SQA/qwen3_vllm/kobest_boolq_other/prompt_v3/sqa_predictions.jsonl"
+}

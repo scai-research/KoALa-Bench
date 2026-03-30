@@ -1,0 +1,17 @@
+{
+  "dataset": "etri_tst-COMMON_processed.jsonl",
+  "model": "mistralai/Voxtral-Mini-3B-2507",
+  "total_samples": 10,
+  "tokenize_method": "character",
+  "corpus_bleu": 31.72162157482017,
+  "corpus_bleu1": 60.483870967741936,
+  "corpus_bleu2": 40.331491712707184,
+  "corpus_bleu3": 29.261363636363637,
+  "corpus_bleu4": 21.34502923976608,
+  "avg_bleu": 33.040257832264714,
+  "avg_meteor": 53.26698479095139,
+  "avg_bertscore_f1": 92.8958410024643,
+  "prompt": "이 오디오를 한국어로 번역해 주세요. 번역 결과만 출력하고 다른 텍스트는 출력하지 마세요.",
+  "elapsed_time_seconds": 11.095943450927734,
+  "timestamp": "2026-03-10T23:36:10.277867"
+}

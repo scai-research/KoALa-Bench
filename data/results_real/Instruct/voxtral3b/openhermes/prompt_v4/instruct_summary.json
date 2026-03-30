@@ -1,0 +1,8 @@
+{
+  "avg_gpt_score": 0.6737179487179491,
+  "total": 78,
+  "scored": 78,
+  "elapsed_seconds": 61.42015719413757,
+  "predictions_file": "/data/jykim/projects/SpeechLM_benchmark/jykim/Ko-Speech-Eval/results_real/Instruct/voxtral3b/openhermes/prompt_v4/instruct_predictions.jsonl",
+  "gpt_model": "gpt-4o-mini"
+}

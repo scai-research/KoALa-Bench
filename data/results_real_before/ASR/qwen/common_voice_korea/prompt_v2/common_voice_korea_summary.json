@@ -1,0 +1,12 @@
+{
+  "dataset": "common_voice_korea.jsonl",
+  "model": null,
+  "total_samples": 523,
+  "total_cer": 0.40411089866156785,
+  "total_edit_distance": 4227,
+  "total_ref_length": 10460,
+  "normalization": "숫자 변형 허용 + 공백 제거",
+  "prompt": "다음 음성을 한국어로 전사해 주시고 설명이나 추가 문장 없이 전사 결과만 제공해 주세요.",
+  "elapsed_time_seconds": 74.9636754989624,
+  "timestamp": "2026-03-06T05:21:36.586271"
+}

@@ -1,0 +1,142 @@
+[
+  {
+    "rank_name": "openfree",
+    "model": "Qwen2-Audio",
+    "url": "https://example.com/openfree",
+    "tasks": {
+      "SCA_QA": {
+        "History_before_chosun": 90.2,
+        "History_after_chosun": 91.5,
+        "K-sports": 89.7,
+        "K-pop": 92.1
+      },
+      "SPEECH_QA": {
+        "CLICk": 92.8,
+        "KoBest BoolQ": 91.6
+      },
+      "SPEECH_INSTRUCTION": {
+        "KUDGE": 88.2,
+        "Vicuna": 86.5,
+        "OpenHermes": 87.3,
+        "Alpaca": 85.9
+      },
+      "ASR": {
+        "KsponSpeech": 3.61,
+        "CommonVoice-KO": 4.82,
+        "Zeroth-Korean": 8.75
+      },
+      "TRANSLATION": {
+        "ETRI-TST-Common": 721.3,
+        "ETRI-TST-HE": 803.6
+      },
+      "LONG_SPEECH_UNDERSTANDING": {
+        "MCTest": 78.2
+      }
+    }
+  },
+  {
+    "rank_name": "KAISAR",
+    "model": "Gemma-Audio",
+    "url": "https://example.com/kaisar",
+    "tasks": {
+      "SCA_QA": {
+        "History_before_chosun": 89.1,
+        "History_after_chosun": 90.2,
+        "K-sports": 88.4,
+        "K-pop": 90.3
+      },
+      "SPEECH_QA": {
+        "CLICk": 90.5,
+        "KoBest BoolQ": 90.1
+      },
+      "SPEECH_INSTRUCTION": {
+        "KUDGE": 86.4,
+        "Vicuna": 85.8,
+        "OpenHermes": 85.9,
+        "Alpaca": 84.2
+      },
+      "ASR": {
+        "KsponSpeech": 3.88,
+        "CommonVoice-KO": 5.12,
+        "Zeroth-Korean": 9.04
+      },
+      "TRANSLATION": {
+        "ETRI-TST-Common": 705.9,
+        "ETRI-TST-HE": 790.1
+      },
+      "LONG_SPEECH_UNDERSTANDING": {
+        "MCTest": 76.9
+      }
+    }
+  },
+  {
+    "rank_name": "ginigen",
+    "model": "Phi-4 Multimodal",
+    "url": "",
+    "tasks": {
+      "SCA_QA": {
+        "History_before_chosun": 87.9,
+        "History_after_chosun": 89.5,
+        "K-sports": 87.1,
+        "K-pop": 89.4
+      },
+      "SPEECH_QA": {
+        "CLICk": 89.4,
+        "KoBest BoolQ": 88.9
+      },
+      "SPEECH_INSTRUCTION": {
+        "KUDGE": 85.6,
+        "Vicuna": 84.9,
+        "OpenHermes": 85.1,
+        "Alpaca": 83.6
+      },
+      "ASR": {
+        "KsponSpeech": 4.05,
+        "CommonVoice-KO": 5.35,
+        "Zeroth-Korean": 9.48
+      },
+      "TRANSLATION": {
+        "ETRI-TST-Common": 689.6,
+        "ETRI-TST-HE": 772.8
+      },
+      "LONG_SPEECH_UNDERSTANDING": {
+        "MCTest": 74.2
+      }
+    }
+  },
+  {
+    "rank_name": "VIDraft",
+    "model": "Llama 3.1 Audio",
+    "url": "https://example.com/vidraft",
+    "tasks": {
+      "SCA_QA": {
+        "History_before_chosun": 86.8,
+        "History_after_chosun": 87.7,
+        "K-sports": 86.3,
+        "K-pop": 88.4
+      },
+      "SPEECH_QA": {
+        "CLICk": 88.2,
+        "KoBest BoolQ": 87.8
+      },
+      "SPEECH_INSTRUCTION": {
+        "KUDGE": 84.1,
+        "Vicuna": 83.2,
+        "OpenHermes": 83.8,
+        "Alpaca": 82.5
+      },
+      "ASR": {
+        "KsponSpeech": 4.12,
+        "CommonVoice-KO": 5.46,
+        "Zeroth-Korean": 9.83
+      },
+      "TRANSLATION": {
+        "ETRI-TST-Common": 676.5,
+        "ETRI-TST-HE": 760.4
+      },
+      "LONG_SPEECH_UNDERSTANDING": {
+        "MCTest": 73.7
+      }
+    }
+  }
+]

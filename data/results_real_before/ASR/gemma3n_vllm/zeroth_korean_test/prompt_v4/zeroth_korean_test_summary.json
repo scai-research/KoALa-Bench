@@ -1,0 +1,12 @@
+{
+  "dataset": "zeroth_korean_test.jsonl",
+  "model": "google/gemma-3n-E4B-it",
+  "total_samples": 457,
+  "total_cer": 1.4709664039817503,
+  "total_edit_distance": 28372,
+  "total_ref_length": 19288,
+  "normalization": "숫자 변형 허용 + 공백 제거",
+  "prompt": "맥락으로 주어진 음성을 한국어로 전사해 주시되 다른 설명 없이 전사된 한국어 텍스트만 응답해 주세요.",
+  "elapsed_time_seconds": 155.58400297164917,
+  "timestamp": "2026-03-06T11:17:47.512263"
+}

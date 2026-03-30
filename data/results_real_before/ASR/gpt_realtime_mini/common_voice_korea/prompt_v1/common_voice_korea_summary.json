@@ -1,0 +1,12 @@
+{
+  "dataset": "common_voice_korea.jsonl",
+  "model": "gpt-audio-mini",
+  "total_samples": 10,
+  "total_cer": 0.8290155440414507,
+  "total_edit_distance": 160,
+  "total_ref_length": 193,
+  "normalization": "구두점 제거 + 공백 제거",
+  "prompt": "주어진 음성을 한국어로 전사하고 전사된 한국어 텍스트만 출력해 주세요.",
+  "elapsed_time_seconds": 9.887781143188477,
+  "timestamp": "2026-03-10T21:32:00.838398"
+}

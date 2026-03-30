@@ -1,0 +1,10 @@
+{
+  "accuracy_logit": 0.3256006628003314,
+  "accuracy_generation": 0.3115161557580779,
+  "correct_logit": 393,
+  "correct_generation": 376,
+  "total": 1207,
+  "invalid_gt_count": 26,
+  "elapsed_seconds": 290.21248388290405,
+  "predictions_file": "/data/jykim/projects/SpeechLM_benchmark/jykim/Ko-Speech-Eval/results_real/SQA/qwen/click/prompt_v4/sqa_predictions.jsonl"
+}

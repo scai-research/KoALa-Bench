@@ -1,0 +1,12 @@
+{
+  "dataset": "common_voice_korea.jsonl",
+  "model": "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+  "total_samples": 523,
+  "total_cer": 0.05047801147227533,
+  "total_edit_distance": 528,
+  "total_ref_length": 10460,
+  "normalization": "숫자 변형 허용 + 공백 제거",
+  "prompt": "주어진 음성을 한국어로 전사하고 전사된 한국어 텍스트만 출력해 주세요.",
+  "elapsed_time_seconds": 58.419403076171875,
+  "timestamp": "2026-03-06T00:04:20.483203"
+}

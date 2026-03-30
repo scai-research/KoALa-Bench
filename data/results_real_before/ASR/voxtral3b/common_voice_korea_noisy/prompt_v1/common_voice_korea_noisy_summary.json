@@ -1,0 +1,12 @@
+{
+  "dataset": "common_voice_korea_noisy.jsonl",
+  "model": "mistralai/Voxtral-Mini-3B-2507",
+  "total_samples": 522,
+  "total_cer": 0.625526618153964,
+  "total_edit_distance": 6533,
+  "total_ref_length": 10444,
+  "normalization": "구두점 제거 + 공백 제거",
+  "prompt": "주어진 음성을 한국어로 전사하고 전사된 한국어 텍스트만 출력해 주세요.",
+  "elapsed_time_seconds": 98.02894067764282,
+  "timestamp": "2026-03-10T19:55:49.709000"
+}

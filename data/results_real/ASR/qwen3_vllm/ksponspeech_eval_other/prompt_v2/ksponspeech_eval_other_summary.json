@@ -1,0 +1,12 @@
+{
+  "dataset": "ksponspeech_eval_other.jsonl",
+  "model": "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+  "total_samples": 3000,
+  "total_cer": 0.0801499438439884,
+  "total_edit_distance": 5495,
+  "total_ref_length": 68559,
+  "normalization": "숫자 변형 허용 + 공백 제거",
+  "prompt": "다음 음성을 한국어로 전사해 주시고 설명이나 추가 문장 없이 전사 결과만 제공해 주세요.",
+  "elapsed_time_seconds": 271.88818407058716,
+  "timestamp": "2026-03-06T00:37:58.952507"
+}

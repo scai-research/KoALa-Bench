@@ -1,0 +1,12 @@
+{
+  "dataset": "common_voice_korea_noisy.jsonl",
+  "model": "google/gemma-3n-E4B-it",
+  "total_samples": 522,
+  "total_cer": 1.945710455764075,
+  "total_edit_distance": 20321,
+  "total_ref_length": 10444,
+  "normalization": "숫자 변형 허용 + 공백 제거",
+  "prompt": "주어진 음성을 한국어로 전사하고 전사된 한국어 텍스트만 출력해 주세요.",
+  "elapsed_time_seconds": 185.2561948299408,
+  "timestamp": "2026-03-06T09:30:59.463344"
+}

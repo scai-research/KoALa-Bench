@@ -1,0 +1,17 @@
+{
+  "dataset": "etri_tst-COMMON_processed.jsonl",
+  "model": "gemini-2.5-flash-lite",
+  "total_samples": 2532,
+  "tokenize_method": "character",
+  "corpus_bleu": 23.27965134261829,
+  "corpus_bleu1": 45.47073857035909,
+  "corpus_bleu2": 28.28754651254849,
+  "corpus_bleu3": 18.535479401524082,
+  "corpus_bleu4": 12.318980675928227,
+  "avg_bleu": 22.879423047941344,
+  "avg_meteor": 47.15412854167342,
+  "avg_bertscore_f1": 91.5968101006737,
+  "prompt": "이 오디오를 한국어로 번역해 주세요. 번역 결과만 출력하고 다른 텍스트는 출력하지 마세요.",
+  "elapsed_time_seconds": 9701.345952033997,
+  "timestamp": "2026-03-12T16:00:14.072714"
+}

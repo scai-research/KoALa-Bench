@@ -1,0 +1,34 @@
+{
+  "accuracy_logit": 0.9388379204892966,
+  "accuracy_generation": 0.9388379204892966,
+  "correct_logit": 307,
+  "correct_generation": 307,
+  "total": 327,
+  "total_before_is_valid_filter": 427,
+  "total_is_valid_true": 327,
+  "invalid_gt_count": 0,
+  "evidence_accuracy": {
+    "front": {
+      "accuracy": 0.9420289855072463,
+      "correct": 130,
+      "total": 138
+    },
+    "front-middle": {
+      "accuracy": 0.9213483146067416,
+      "correct": 82,
+      "total": 89
+    },
+    "middle-late": {
+      "accuracy": 0.8831168831168831,
+      "correct": 68,
+      "total": 77
+    },
+    "late": {
+      "accuracy": 0.9636363636363636,
+      "correct": 53,
+      "total": 55
+    }
+  },
+  "elapsed_seconds": 2071.600730419159,
+  "predictions_file": "/data/jykim/projects/SpeechLM_benchmark/jykim/Ko-Speech-Eval/results_real/LSQA/gemini_flash/mctest_final_with_audio-add-evidence-7_tts_filtered/prompt_v1/lsqa_predictions.jsonl"
+}

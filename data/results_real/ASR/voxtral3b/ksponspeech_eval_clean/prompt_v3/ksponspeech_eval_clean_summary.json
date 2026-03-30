@@ -1,0 +1,12 @@
+{
+  "dataset": "ksponspeech_eval_clean.jsonl",
+  "model": "mistralai/Voxtral-Mini-3B-2507",
+  "total_samples": 3000,
+  "total_cer": 0.6262463680260875,
+  "total_edit_distance": 29959,
+  "total_ref_length": 47839,
+  "normalization": "구두점 제거 + 공백 제거",
+  "prompt": "제공된 음성의 내용을 한국어로 정확하게 전사해 주시고 전사된 문장만 출력해 주세요.",
+  "elapsed_time_seconds": 395.6745195388794,
+  "timestamp": "2026-03-10T20:21:28.003468"
+}

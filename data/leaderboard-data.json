@@ -1,0 +1,1206 @@
+{
+  "generatedAt": "2026-03-13T16:26:56.022330+00:00",
+  "sourceRoot": "data/results_real",
+  "tasks": [
+    {
+      "id": "K-disentQA",
+      "label": "SCA-QA",
+      "metricLabel": "Speech Context Faithfulness",
+      "shortMetric": "Faithfulness",
+      "lowerBetter": false,
+      "datasets": [
+        {
+          "id": "history_after_chosun",
+          "label": "History_after_chosun"
+        },
+        {
+          "id": "history_after_chosun_other",
+          "label": "History_after_chosun Other"
+        },
+        {
+          "id": "history_after_chosun_other_filtered",
+          "label": "history_after_chosun_other_filtered"
+        },
+        {
+          "id": "history_after_chosun_tts",
+          "label": "History_after_chosun TTS"
+        },
+        {
+          "id": "history_after_chosun_tts_filtered",
+          "label": "history_after_chosun_tts_filtered"
+        },
+        {
+          "id": "history_before_chosun",
+          "label": "History_before_chosun"
+        },
+        {
+          "id": "history_before_chosun_filtered",
+          "label": "history_before_chosun_filtered"
+        },
+        {
+          "id": "history_before_chosun_other",
+          "label": "History_before_chosun Other"
+        },
+        {
+          "id": "history_before_chosun_other_filtered",
+          "label": "history_before_chosun_other_filtered"
+        },
+        {
+          "id": "k-sports",
+          "label": "K-sports"
+        },
+        {
+          "id": "k-sports_filtered",
+          "label": "k-sports_filtered"
+        },
+        {
+          "id": "k-sports_other",
+          "label": "K-sports Other"
+        },
+        {
+          "id": "k-sports_other_filtered",
+          "label": "k-sports_other_filtered"
+        },
+        {
+          "id": "kpop",
+          "label": "K-pop"
+        },
+        {
+          "id": "kpop_filtered",
+          "label": "kpop_filtered"
+        },
+        {
+          "id": "kpop_other",
+          "label": "K-pop Other"
+        },
+        {
+          "id": "kpop_other_filtered",
+          "label": "kpop_other_filtered"
+        }
+      ]
+    },
+    {
+      "id": "SQA",
+      "label": "Speech QA",
+      "metricLabel": "Accuracy (%)",
+      "shortMetric": "Acc(%)",
+      "lowerBetter": false,
+      "datasets": [
+        {
+          "id": "click",
+          "label": "CLICk"
+        },
+        {
+          "id": "click_other",
+          "label": "CLICk Other"
+        },
+        {
+          "id": "kobest_boolq",
+          "label": "KoBest BoolQ"
+        },
+        {
+          "id": "kobest_boolq_other",
+          "label": "KoBest BoolQ Other"
+        }
+      ]
+    },
+    {
+      "id": "Instruct",
+      "label": "Speech Instruction",
+      "metricLabel": "GPT-4o Judge Score",
+      "shortMetric": "GPT-4o Judge",
+      "lowerBetter": false,
+      "datasets": [
+        {
+          "id": "alpaca",
+          "label": "Alpaca"
+        },
+        {
+          "id": "alpaca_other",
+          "label": "Alpaca Other"
+        },
+        {
+          "id": "kudge",
+          "label": "KUDGE"
+        },
+        {
+          "id": "kudge_other",
+          "label": "KUDGE Other"
+        },
+        {
+          "id": "openhermes",
+          "label": "OpenHermes"
+        },
+        {
+          "id": "openhermes_other",
+          "label": "OpenHermes Other"
+        },
+        {
+          "id": "vicuna",
+          "label": "Vicuna"
+        },
+        {
+          "id": "vicuna_other",
+          "label": "Vicuna Other"
+        }
+      ]
+    },
+    {
+      "id": "ASR",
+      "label": "ASR",
+      "metricLabel": "CER (%)",
+      "shortMetric": "CER",
+      "lowerBetter": true,
+      "datasets": [
+        {
+          "id": "common_voice_korea",
+          "label": "CommonVoice-KO"
+        },
+        {
+          "id": "common_voice_korea_noisy",
+          "label": "CommonVoice-KO Noisy"
+        },
+        {
+          "id": "ksponspeech_eval_clean",
+          "label": "KsponSpeech Clean"
+        },
+        {
+          "id": "ksponspeech_eval_other",
+          "label": "KsponSpeech Other"
+        },
+        {
+          "id": "zeroth_korean_noisy_wav",
+          "label": "zeroth_korean_noisy_wav"
+        },
+        {
+          "id": "zeroth_korean_test",
+          "label": "Zeroth-Korean"
+        },
+        {
+          "id": "zeroth_korean_test_noisy",
+          "label": "Zeroth-Korean Noisy"
+        },
+        {
+          "id": "zeroth_korean_wav",
+          "label": "zeroth_korean_wav"
+        }
+      ]
+    },
+    {
+      "id": "Translation",
+      "label": "Translation",
+      "metricLabel": "BLEU / METEOR",
+      "shortMetric": "BLEU / METEOR",
+      "lowerBetter": false,
+      "datasets": [
+        {
+          "id": "etri_tst-COMMON_processed",
+          "label": "ETRI-TST-Common"
+        },
+        {
+          "id": "etri_tst-HE_processed",
+          "label": "ETRI-TST-HE"
+        }
+      ]
+    },
+    {
+      "id": "LSQA",
+      "label": "Long Speech Understanding",
+      "metricLabel": "Accuracy (%)",
+      "shortMetric": "Acc(%)",
+      "lowerBetter": false,
+      "datasets": [
+        {
+          "id": "mctest_final_with_audio-add-evidence-7",
+          "label": "MCTest"
+        },
+        {
+          "id": "mctest_final_with_audio-add-evidence-7_noise",
+          "label": "MCTest Noise"
+        },
+        {
+          "id": "mctest_final_with_audio-add-evidence-7_noise_filtered",
+          "label": "mctest_final_with_audio-add-evidence-7_noise_filtered"
+        },
+        {
+          "id": "mctest_final_with_audio-add-evidence-7_tts_filtered",
+          "label": "mctest_final_with_audio-add-evidence-7_tts_filtered"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "id": "gemini_flash",
+      "rank_name": "gemini_flash",
+      "model": "gemini-2.5-flash-lite",
+      "url": "",
+      "tasks": {
+        "ASR": {
+          "common_voice_korea": {
+            "value": 13.738049713193117,
+            "display": "13.74"
+          },
+          "common_voice_korea_noisy": {
+            "value": 26.73996175908222,
+            "display": "26.74"
+          },
+          "ksponspeech_eval_clean": {
+            "value": 83.18526725056962,
+            "display": "83.19"
+          },
+          "ksponspeech_eval_other": {
+            "value": 45.13922315086276,
+            "display": "45.14"
+          },
+          "zeroth_korean_test": {
+            "value": 13.599128992119452,
+            "display": "13.60"
+          },
+          "zeroth_korean_test_noisy": {
+            "value": 14.558274574865202,
+            "display": "14.56"
+          }
+        },
+        "Instruct": {
+          "alpaca": {
+            "value": 85.94202898550726,
+            "display": "85.94"
+          },
+          "alpaca_other": {
+            "value": 86.8840579710145,
+            "display": "86.88"
+          },
+          "kudge": {
+            "value": 70.28725314183116,
+            "display": "70.29"
+          },
+          "kudge_other": {
+            "value": 70.3859964093356,
+            "display": "70.39"
+          },
+          "openhermes": {
+            "value": 82.69230769230771,
+            "display": "82.69"
+          },
+          "openhermes_other": {
+            "value": 80.70512820512825,
+            "display": "80.71"
+          },
+          "vicuna": {
+            "value": 76.42857142857144,
+            "display": "76.43"
+          },
+          "vicuna_other": {
+            "value": 73.28571428571429,
+            "display": "73.29"
+          }
+        },
+        "K-disentQA": {
+          "history_after_chosun_other_filtered": {
+            "value": 58.536585365853654,
+            "display": "58.54"
+          },
+          "history_after_chosun_tts_filtered": {
+            "value": 64.63414634146342,
+            "display": "64.63"
+          },
+          "history_before_chosun_filtered": {
+            "value": 66.33663366336634,
+            "display": "66.34"
+          },
+          "history_before_chosun_other_filtered": {
+            "value": 65.34653465346535,
+            "display": "65.35"
+          },
+          "k-sports_filtered": {
+            "value": 86.36363636363636,
+            "display": "86.36"
+          },
+          "k-sports_other_filtered": {
+            "value": 84.0909090909091,
+            "display": "84.09"
+          },
+          "kpop_filtered": {
+            "value": 69.90291262135922,
+            "display": "69.90"
+          },
+          "kpop_other_filtered": {
+            "value": 73.7864077669903,
+            "display": "73.79"
+          }
+        },
+        "LSQA": {
+          "mctest_final_with_audio-add-evidence-7_noise_filtered": {
+            "value": 94.18960244648318,
+            "display": "94.19"
+          },
+          "mctest_final_with_audio-add-evidence-7_tts_filtered": {
+            "value": 93.88379204892966,
+            "display": "93.88"
+          }
+        },
+        "SQA": {
+          "click": {
+            "value": 60.48053024026512,
+            "display": "60.48"
+          },
+          "click_other": {
+            "value": 60.56338028169014,
+            "display": "60.56"
+          },
+          "kobest_boolq": {
+            "value": 51.967799642218246,
+            "display": "51.97"
+          },
+          "kobest_boolq_other": {
+            "value": 50.44722719141323,
+            "display": "50.45"
+          }
+        },
+        "Translation": {
+          "etri_tst-COMMON_processed": {
+            "value": 22.879423047941344,
+            "display": "22.88 / 47.15"
+          },
+          "etri_tst-HE_processed": {
+            "value": 26.953160916836307,
+            "display": "26.95 / 52.59"
+          }
+        }
+      }
+    },
+    {
+      "id": "gemma3n_vllm",
+      "rank_name": "gemma3n_vllm",
+      "model": "google/gemma-3n-E4B-it",
+      "url": "",
+      "tasks": {
+        "ASR": {
+          "common_voice_korea": {
+            "value": 144.5793499043977,
+            "display": "144.58"
+          },
+          "common_voice_korea_noisy": {
+            "value": 178.34163155878971,
+            "display": "178.34"
+          },
+          "ksponspeech_eval_clean": {
+            "value": 142.99420974518696,
+            "display": "142.99"
+          },
+          "ksponspeech_eval_other": {
+            "value": 130.76182558088652,
+            "display": "130.76"
+          },
+          "zeroth_korean_test": {
+            "value": 107.88054749066778,
+            "display": "107.88"
+          },
+          "zeroth_korean_test_noisy": {
+            "value": 118.62297801742017,
+            "display": "118.62"
+          }
+        },
+        "Instruct": {
+          "alpaca": {
+            "value": 82.97101449275362,
+            "display": "82.97"
+          },
+          "alpaca_other": {
+            "value": 83.36231884057973,
+            "display": "83.36"
+          },
+          "kudge": {
+            "value": 71.38240574506275,
+            "display": "71.38"
+          },
+          "kudge_other": {
+            "value": 70.69120287253139,
+            "display": "70.69"
+          },
+          "openhermes": {
+            "value": 84.61538461538464,
+            "display": "84.62"
+          },
+          "openhermes_other": {
+            "value": 85.96153846153848,
+            "display": "85.96"
+          },
+          "vicuna": {
+            "value": 80.21428571428574,
+            "display": "80.21"
+          },
+          "vicuna_other": {
+            "value": 80.00000000000003,
+            "display": "80.00"
+          }
+        },
+        "K-disentQA": {
+          "history_after_chosun": {
+            "value": 42.57425742574257,
+            "display": "42.57"
+          },
+          "history_after_chosun_other": {
+            "value": 46.0,
+            "display": "46.00"
+          },
+          "history_after_chosun_other_filtered": {
+            "value": 48.78048780487805,
+            "display": "48.78"
+          },
+          "history_after_chosun_tts_filtered": {
+            "value": 50.0,
+            "display": "50.00"
+          },
+          "history_before_chosun": {
+            "value": 57.49999999999999,
+            "display": "57.50"
+          },
+          "history_before_chosun_filtered": {
+            "value": 69.3069306930693,
+            "display": "69.31"
+          },
+          "history_before_chosun_other": {
+            "value": 56.666666666666664,
+            "display": "56.67"
+          },
+          "history_before_chosun_other_filtered": {
+            "value": 68.31683168316832,
+            "display": "68.32"
+          },
+          "k-sports": {
+            "value": 73.0,
+            "display": "73.00"
+          },
+          "k-sports_filtered": {
+            "value": 76.13636363636364,
+            "display": "76.14"
+          },
+          "k-sports_other": {
+            "value": 73.0,
+            "display": "73.00"
+          },
+          "k-sports_other_filtered": {
+            "value": 73.86363636363636,
+            "display": "73.86"
+          },
+          "kpop": {
+            "value": 66.66666666666666,
+            "display": "66.67"
+          },
+          "kpop_filtered": {
+            "value": 65.0485436893204,
+            "display": "65.05"
+          },
+          "kpop_other": {
+            "value": 64.28571428571429,
+            "display": "64.29"
+          },
+          "kpop_other_filtered": {
+            "value": 64.07766990291263,
+            "display": "64.08"
+          }
+        },
+        "LSQA": {
+          "mctest_final_with_audio-add-evidence-7": {
+            "value": 45.18518518518518,
+            "display": "45.19"
+          },
+          "mctest_final_with_audio-add-evidence-7_noise": {
+            "value": 44.93827160493827,
+            "display": "44.94"
+          },
+          "mctest_final_with_audio-add-evidence-7_noise_filtered": {
+            "value": 48.62385321100918,
+            "display": "48.62"
+          },
+          "mctest_final_with_audio-add-evidence-7_tts_filtered": {
+            "value": 47.706422018348626,
+            "display": "47.71"
+          }
+        },
+        "SQA": {
+          "click": {
+            "value": 35.294117647058826,
+            "display": "35.29"
+          },
+          "click_other": {
+            "value": 35.708367854183926,
+            "display": "35.71"
+          },
+          "kobest_boolq": {
+            "value": 50.715563506261184,
+            "display": "50.72"
+          },
+          "kobest_boolq_other": {
+            "value": 51.25223613595706,
+            "display": "51.25"
+          }
+        },
+        "Translation": {
+          "etri_tst-COMMON_processed": {
+            "value": 5.1704245727847375,
+            "display": "5.17 / 16.97"
+          },
+          "etri_tst-HE_processed": {
+            "value": 5.235146756138342,
+            "display": "5.24 / 17.50"
+          }
+        }
+      }
+    },
+    {
+      "id": "gpt_realtime_mini",
+      "rank_name": "gpt_realtime_mini",
+      "model": "gpt-audio-mini",
+      "url": "",
+      "tasks": {
+        "ASR": {
+          "common_voice_korea": {
+            "value": 33.04971319311664,
+            "display": "33.05"
+          },
+          "common_voice_korea_noisy": {
+            "value": 36.21414913957935,
+            "display": "36.21"
+          },
+          "ksponspeech_eval_clean": {
+            "value": 134.18967787788205,
+            "display": "134.19"
+          },
+          "ksponspeech_eval_other": {
+            "value": 63.6444522236322,
+            "display": "63.64"
+          },
+          "zeroth_korean_noisy_wav": {
+            "value": 8.99523019493986,
+            "display": "9.00"
+          },
+          "zeroth_korean_test": {
+            "value": 100.0,
+            "display": "100.00"
+          },
+          "zeroth_korean_test_noisy": {
+            "value": 100.0,
+            "display": "100.00"
+          },
+          "zeroth_korean_wav": {
+            "value": 6.874740771464123,
+            "display": "6.87"
+          }
+        },
+        "Instruct": {
+          "alpaca": {
+            "value": 90.57971014492755,
+            "display": "90.58"
+          },
+          "alpaca_other": {
+            "value": 90.57971014492755,
+            "display": "90.58"
+          },
+          "kudge": {
+            "value": 74.06642728904846,
+            "display": "74.07"
+          },
+          "kudge_other": {
+            "value": 73.98563734290842,
+            "display": "73.99"
+          },
+          "openhermes": {
+            "value": 89.42307692307693,
+            "display": "89.42"
+          },
+          "openhermes_other": {
+            "value": 89.61538461538464,
+            "display": "89.62"
+          },
+          "vicuna": {
+            "value": 82.14285714285717,
+            "display": "82.14"
+          },
+          "vicuna_other": {
+            "value": 81.78571428571429,
+            "display": "81.79"
+          }
+        },
+        "K-disentQA": {
+          "history_after_chosun_other_filtered": {
+            "value": 42.68292682926829,
+            "display": "42.68"
+          },
+          "history_after_chosun_tts_filtered": {
+            "value": 45.1219512195122,
+            "display": "45.12"
+          },
+          "history_before_chosun_filtered": {
+            "value": 64.35643564356435,
+            "display": "64.36"
+          },
+          "history_before_chosun_other_filtered": {
+            "value": 62.37623762376238,
+            "display": "62.38"
+          },
+          "k-sports_filtered": {
+            "value": 45.45454545454545,
+            "display": "45.45"
+          },
+          "k-sports_other_filtered": {
+            "value": 46.590909090909086,
+            "display": "46.59"
+          },
+          "kpop_filtered": {
+            "value": 41.74757281553398,
+            "display": "41.75"
+          },
+          "kpop_other_filtered": {
+            "value": 40.77669902912621,
+            "display": "40.78"
+          }
+        },
+        "LSQA": {
+          "mctest_final_with_audio-add-evidence-7_noise_filtered": {
+            "value": 82.87461773700305,
+            "display": "82.87"
+          },
+          "mctest_final_with_audio-add-evidence-7_tts_filtered": {
+            "value": 84.09785932721712,
+            "display": "84.10"
+          }
+        },
+        "SQA": {
+          "click": {
+            "value": 61.64043082021541,
+            "display": "61.64"
+          },
+          "click_other": {
+            "value": 60.06628003314002,
+            "display": "60.07"
+          },
+          "kobest_boolq": {
+            "value": 51.878354203935594,
+            "display": "51.88"
+          },
+          "kobest_boolq_other": {
+            "value": 50.44722719141323,
+            "display": "50.45"
+          }
+        },
+        "Translation": {
+          "etri_tst-COMMON_processed": {
+            "value": 26.06340955434567,
+            "display": "26.06 / 49.37"
+          },
+          "etri_tst-HE_processed": {
+            "value": 28.984282512215568,
+            "display": "28.98 / 52.96"
+          }
+        }
+      }
+    },
+    {
+      "id": "qwen",
+      "rank_name": "qwen",
+      "model": "qwen",
+      "url": "",
+      "tasks": {
+        "ASR": {
+          "common_voice_korea": {
+            "value": 33.55640535372849,
+            "display": "33.56"
+          },
+          "common_voice_korea_noisy": {
+            "value": 38.14630409804673,
+            "display": "38.15"
+          },
+          "ksponspeech_eval_clean": {
+            "value": 39.99665544848345,
+            "display": "40.00"
+          },
+          "ksponspeech_eval_other": {
+            "value": 35.66417246459254,
+            "display": "35.66"
+          },
+          "zeroth_korean_test": {
+            "value": 22.169224388220655,
+            "display": "22.17"
+          },
+          "zeroth_korean_test_noisy": {
+            "value": 25.036291995022815,
+            "display": "25.04"
+          }
+        },
+        "Instruct": {
+          "alpaca": {
+            "value": 55.79710144927535,
+            "display": "55.80"
+          },
+          "alpaca_other": {
+            "value": 55.43478260869564,
+            "display": "55.43"
+          },
+          "kudge": {
+            "value": 58.88888888888886,
+            "display": "58.89"
+          },
+          "kudge_other": {
+            "value": 55.25134649910226,
+            "display": "55.25"
+          },
+          "openhermes": {
+            "value": 59.679487179487175,
+            "display": "59.68"
+          },
+          "openhermes_other": {
+            "value": 59.294871794871796,
+            "display": "59.29"
+          },
+          "vicuna": {
+            "value": 63.28571428571424,
+            "display": "63.29"
+          },
+          "vicuna_other": {
+            "value": 61.49999999999998,
+            "display": "61.50"
+          }
+        },
+        "K-disentQA": {
+          "history_after_chosun_other": {
+            "value": 63.0,
+            "display": "63.00"
+          },
+          "history_after_chosun_other_filtered": {
+            "value": 63.41463414634146,
+            "display": "63.41"
+          },
+          "history_after_chosun_tts": {
+            "value": 67.0,
+            "display": "67.00"
+          },
+          "history_after_chosun_tts_filtered": {
+            "value": 67.07317073170732,
+            "display": "67.07"
+          },
+          "history_before_chosun": {
+            "value": 70.83333333333334,
+            "display": "70.83"
+          },
+          "history_before_chosun_filtered": {
+            "value": 72.27722772277228,
+            "display": "72.28"
+          },
+          "history_before_chosun_other": {
+            "value": 65.83333333333333,
+            "display": "65.83"
+          },
+          "history_before_chosun_other_filtered": {
+            "value": 66.33663366336634,
+            "display": "66.34"
+          },
+          "k-sports": {
+            "value": 90.0,
+            "display": "90.00"
+          },
+          "k-sports_filtered": {
+            "value": 88.63636363636364,
+            "display": "88.64"
+          },
+          "k-sports_other": {
+            "value": 89.0,
+            "display": "89.00"
+          },
+          "k-sports_other_filtered": {
+            "value": 87.5,
+            "display": "87.50"
+          },
+          "kpop": {
+            "value": 80.95238095238095,
+            "display": "80.95"
+          },
+          "kpop_filtered": {
+            "value": 81.55339805825243,
+            "display": "81.55"
+          },
+          "kpop_other": {
+            "value": 79.36507936507937,
+            "display": "79.37"
+          },
+          "kpop_other_filtered": {
+            "value": 81.55339805825243,
+            "display": "81.55"
+          }
+        },
+        "LSQA": {
+          "mctest_final_with_audio-add-evidence-7": {
+            "value": 49.135802469135804,
+            "display": "49.14"
+          },
+          "mctest_final_with_audio-add-evidence-7_noise": {
+            "value": 48.39506172839506,
+            "display": "48.40"
+          },
+          "mctest_final_with_audio-add-evidence-7_noise_filtered": {
+            "value": 50.45871559633027,
+            "display": "50.46"
+          },
+          "mctest_final_with_audio-add-evidence-7_tts_filtered": {
+            "value": 51.07033639143731,
+            "display": "51.07"
+          }
+        },
+        "SQA": {
+          "click": {
+            "value": 33.471416735708374,
+            "display": "33.47"
+          },
+          "click_other": {
+            "value": 32.64291632145816,
+            "display": "32.64"
+          },
+          "kobest_boolq": {
+            "value": 50.62611806797853,
+            "display": "50.63"
+          },
+          "kobest_boolq_other": {
+            "value": 50.62611806797853,
+            "display": "50.63"
+          }
+        },
+        "Translation": {
+          "etri_tst-COMMON_processed": {
+            "value": 15.98267809185928,
+            "display": "15.98 / 36.78"
+          },
+          "etri_tst-HE_processed": {
+            "value": 19.09056943080292,
+            "display": "19.09 / 40.77"
+          }
+        }
+      }
+    },
+    {
+      "id": "qwen3_vllm",
+      "rank_name": "qwen3_vllm",
+      "model": "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+      "url": "",
+      "tasks": {
+        "ASR": {
+          "common_voice_korea": {
+            "value": 4.961759082217973,
+            "display": "4.96"
+          },
+          "common_voice_korea_noisy": {
+            "value": 6.779011872845652,
+            "display": "6.78"
+          },
+          "ksponspeech_eval_clean": {
+            "value": 8.459624992161208,
+            "display": "8.46"
+          },
+          "ksponspeech_eval_other": {
+            "value": 7.907058154290465,
+            "display": "7.91"
+          },
+          "zeroth_korean_test": {
+            "value": 3.3336789713811696,
+            "display": "3.33"
+          },
+          "zeroth_korean_test_noisy": {
+            "value": 3.9143508917461634,
+            "display": "3.91"
+          }
+        },
+        "Instruct": {
+          "alpaca": {
+            "value": 84.05797101449278,
+            "display": "84.06"
+          },
+          "alpaca_other": {
+            "value": 83.04347826086959,
+            "display": "83.04"
+          },
+          "kudge": {
+            "value": 71.86714542190298,
+            "display": "71.87"
+          },
+          "kudge_other": {
+            "value": 71.82226211849184,
+            "display": "71.82"
+          },
+          "openhermes": {
+            "value": 86.5384615384616,
+            "display": "86.54"
+          },
+          "openhermes_other": {
+            "value": 85.19230769230771,
+            "display": "85.19"
+          },
+          "vicuna": {
+            "value": 79.64285714285715,
+            "display": "79.64"
+          },
+          "vicuna_other": {
+            "value": 78.42857142857143,
+            "display": "78.43"
+          }
+        },
+        "K-disentQA": {
+          "history_after_chosun": {
+            "value": 83.16831683168317,
+            "display": "83.17"
+          },
+          "history_after_chosun_other": {
+            "value": 83.0,
+            "display": "83.00"
+          },
+          "history_after_chosun_other_filtered": {
+            "value": 82.92682926829268,
+            "display": "82.93"
+          },
+          "history_after_chosun_tts_filtered": {
+            "value": 84.14634146341463,
+            "display": "84.15"
+          },
+          "history_before_chosun": {
+            "value": 95.0,
+            "display": "95.00"
+          },
+          "history_before_chosun_filtered": {
+            "value": 94.05940594059405,
+            "display": "94.06"
+          },
+          "history_before_chosun_other": {
+            "value": 93.33333333333333,
+            "display": "93.33"
+          },
+          "history_before_chosun_other_filtered": {
+            "value": 94.05940594059405,
+            "display": "94.06"
+          },
+          "k-sports": {
+            "value": 90.0,
+            "display": "90.00"
+          },
+          "k-sports_filtered": {
+            "value": 88.63636363636364,
+            "display": "88.64"
+          },
+          "k-sports_other": {
+            "value": 91.0,
+            "display": "91.00"
+          },
+          "k-sports_other_filtered": {
+            "value": 89.77272727272727,
+            "display": "89.77"
+          },
+          "kpop": {
+            "value": 86.5079365079365,
+            "display": "86.51"
+          },
+          "kpop_filtered": {
+            "value": 88.3495145631068,
+            "display": "88.35"
+          },
+          "kpop_other": {
+            "value": 83.33333333333334,
+            "display": "83.33"
+          },
+          "kpop_other_filtered": {
+            "value": 85.43689320388349,
+            "display": "85.44"
+          }
+        },
+        "LSQA": {
+          "mctest_final_with_audio-add-evidence-7": {
+            "value": 90.37037037037037,
+            "display": "90.37"
+          },
+          "mctest_final_with_audio-add-evidence-7_noise": {
+            "value": 92.8395061728395,
+            "display": "92.84"
+          },
+          "mctest_final_with_audio-add-evidence-7_noise_filtered": {
+            "value": 95.71865443425077,
+            "display": "95.72"
+          },
+          "mctest_final_with_audio-add-evidence-7_tts_filtered": {
+            "value": 92.04892966360856,
+            "display": "92.05"
+          }
+        },
+        "SQA": {
+          "click": {
+            "value": 63.96023198011599,
+            "display": "63.96"
+          },
+          "click_other": {
+            "value": 61.55758077879039,
+            "display": "61.56"
+          },
+          "kobest_boolq": {
+            "value": 51.341681574239715,
+            "display": "51.34"
+          },
+          "kobest_boolq_other": {
+            "value": 51.43112701252236,
+            "display": "51.43"
+          }
+        },
+        "Translation": {
+          "etri_tst-COMMON_processed": {
+            "value": 28.528409006302443,
+            "display": "28.53 / 52.02"
+          },
+          "etri_tst-HE_processed": {
+            "value": 31.70803814468474,
+            "display": "31.71 / 55.79"
+          }
+        }
+      }
+    },
+    {
+      "id": "voxtral3b",
+      "rank_name": "voxtral3b",
+      "model": "mistralai/Voxtral-Mini-3B-2507",
+      "url": "",
+      "tasks": {
+        "ASR": {
+          "common_voice_korea": {
+            "value": 60.09560229445506,
+            "display": "60.10"
+          },
+          "common_voice_korea_noisy": {
+            "value": 58.98123324396782,
+            "display": "58.98"
+          },
+          "ksponspeech_eval_clean": {
+            "value": 62.62463680260875,
+            "display": "62.62"
+          },
+          "ksponspeech_eval_other": {
+            "value": 56.042240989512685,
+            "display": "56.04"
+          },
+          "zeroth_korean_test": {
+            "value": 40.92181667357943,
+            "display": "40.92"
+          },
+          "zeroth_korean_test_noisy": {
+            "value": 39.06574035669846,
+            "display": "39.07"
+          }
+        },
+        "Instruct": {
+          "alpaca": {
+            "value": 72.89855072463769,
+            "display": "72.90"
+          },
+          "alpaca_other": {
+            "value": 72.46376811594205,
+            "display": "72.46"
+          },
+          "kudge": {
+            "value": 61.9658886894074,
+            "display": "61.97"
+          },
+          "kudge_other": {
+            "value": 61.69658886894065,
+            "display": "61.70"
+          },
+          "openhermes": {
+            "value": 69.10256410256412,
+            "display": "69.10"
+          },
+          "openhermes_other": {
+            "value": 69.61538461538463,
+            "display": "69.62"
+          },
+          "vicuna": {
+            "value": 67.78571428571428,
+            "display": "67.79"
+          },
+          "vicuna_other": {
+            "value": 69.49999999999997,
+            "display": "69.50"
+          }
+        },
+        "K-disentQA": {
+          "history_after_chosun_other_filtered": {
+            "value": 78.04878048780488,
+            "display": "78.05"
+          },
+          "history_after_chosun_tts": {
+            "value": 20.0,
+            "display": "20.00"
+          },
+          "history_after_chosun_tts_filtered": {
+            "value": 81.70731707317073,
+            "display": "81.71"
+          },
+          "history_before_chosun_filtered": {
+            "value": 86.13861386138613,
+            "display": "86.14"
+          },
+          "history_before_chosun_other_filtered": {
+            "value": 86.13861386138613,
+            "display": "86.14"
+          },
+          "k-sports_filtered": {
+            "value": 94.31818181818183,
+            "display": "94.32"
+          },
+          "k-sports_other_filtered": {
+            "value": 94.31818181818183,
+            "display": "94.32"
+          },
+          "kpop_filtered": {
+            "value": 89.32038834951457,
+            "display": "89.32"
+          },
+          "kpop_other_filtered": {
+            "value": 90.29126213592234,
+            "display": "90.29"
+          }
+        },
+        "LSQA": {
+          "mctest_final_with_audio-add-evidence-7_noise_filtered": {
+            "value": 89.29663608562691,
+            "display": "89.30"
+          },
+          "mctest_final_with_audio-add-evidence-7_tts_filtered": {
+            "value": 88.37920489296636,
+            "display": "88.38"
+          }
+        },
+        "SQA": {
+          "click": {
+            "value": 41.25932062966031,
+            "display": "41.26"
+          },
+          "click_other": {
+            "value": 41.01077050538525,
+            "display": "41.01"
+          },
+          "kobest_boolq": {
+            "value": 51.788908765652955,
+            "display": "51.79"
+          },
+          "kobest_boolq_other": {
+            "value": 51.073345259391765,
+            "display": "51.07"
+          }
+        },
+        "Translation": {
+          "etri_tst-COMMON_processed": {
+            "value": 23.06821405492274,
+            "display": "23.07 / 45.95"
+          },
+          "etri_tst-HE_processed": {
+            "value": 26.078611466879202,
+            "display": "26.08 / 50.16"
+          }
+        }
+      }
+    }
+  ]
+}

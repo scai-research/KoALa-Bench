@@ -1,0 +1,17 @@
+{
+  "dataset": "etri_tst-COMMON_processed.jsonl",
+  "model": "Qwen/Qwen2-Audio-7B-Instruct",
+  "total_samples": 2532,
+  "tokenize_method": "character",
+  "corpus_bleu": 13.435670178009273,
+  "corpus_bleu1": 32.00985562061316,
+  "corpus_bleu2": 17.076822916666668,
+  "corpus_bleu3": 10.013706975327445,
+  "corpus_bleu4": 5.953216374269005,
+  "avg_bleu": 11.529539448719387,
+  "avg_meteor": 27.928575482335603,
+  "avg_bertscore_f1": 90.13099760335015,
+  "prompt": "다음 문장의 의미를 그대로 유지한 채 한국어로 번역하고 번역 결과만 출력하시오.",
+  "elapsed_time_seconds": 535.2323021888733,
+  "timestamp": "2026-03-06T08:38:11.872883"
+}

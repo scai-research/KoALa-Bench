@@ -1,0 +1,12 @@
+{
+  "dataset": "zeroth_korean_test_noisy.jsonl",
+  "model": null,
+  "total_samples": 457,
+  "total_cer": 0.2687681459975114,
+  "total_edit_distance": 5184,
+  "total_ref_length": 19288,
+  "normalization": "숫자 변형 허용 + 공백 제거",
+  "prompt": "맥락으로 주어진 음성을 한국어로 전사해 주시되 다른 설명 없이 전사된 한국어 텍스트만 응답해 주세요.",
+  "elapsed_time_seconds": 73.48729705810547,
+  "timestamp": "2026-03-06T06:37:28.164864"
+}

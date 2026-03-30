@@ -1,0 +1,12 @@
+{
+  "dataset": "common_voice_korea.jsonl",
+  "model": "google/gemma-3n-E4B-it",
+  "total_samples": 523,
+  "total_cer": 1.8219885277246655,
+  "total_edit_distance": 19058,
+  "total_ref_length": 10460,
+  "normalization": "숫자 변형 허용 + 공백 제거",
+  "prompt": "맥락으로 주어진 음성을 한국어로 전사해 주시되 다른 설명 없이 전사된 한국어 텍스트만 응답해 주세요.",
+  "elapsed_time_seconds": 147.14897418022156,
+  "timestamp": "2026-03-06T09:26:13.796740"
+}

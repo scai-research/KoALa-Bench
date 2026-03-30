@@ -1,0 +1,34 @@
+{
+  "accuracy_logit": 0.9571865443425076,
+  "accuracy_generation": 0.9571865443425076,
+  "correct_logit": 313,
+  "correct_generation": 313,
+  "total": 327,
+  "total_before_is_valid_filter": 427,
+  "total_is_valid_true": 327,
+  "invalid_gt_count": 0,
+  "evidence_accuracy": {
+    "front": {
+      "accuracy": 0.9637681159420289,
+      "correct": 133,
+      "total": 138
+    },
+    "front-middle": {
+      "accuracy": 0.9325842696629213,
+      "correct": 83,
+      "total": 89
+    },
+    "middle-late": {
+      "accuracy": 0.974025974025974,
+      "correct": 75,
+      "total": 77
+    },
+    "late": {
+      "accuracy": 0.9636363636363636,
+      "correct": 53,
+      "total": 55
+    }
+  },
+  "elapsed_seconds": 243.21292877197266,
+  "predictions_file": "/data/jykim/projects/SpeechLM_benchmark/jykim/Ko-Speech-Eval/results_real/LSQA/qwen3_vllm/mctest_final_with_audio-add-evidence-7_noise_filtered/lsqa_predictions.jsonl"
+}

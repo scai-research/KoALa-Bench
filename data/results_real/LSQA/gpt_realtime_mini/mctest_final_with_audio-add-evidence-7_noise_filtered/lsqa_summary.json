@@ -1,0 +1,34 @@
+{
+  "accuracy_logit": 0.8287461773700305,
+  "accuracy_generation": 0.8348623853211009,
+  "correct_logit": 271,
+  "correct_generation": 273,
+  "total": 327,
+  "total_before_is_valid_filter": 427,
+  "total_is_valid_true": 327,
+  "invalid_gt_count": 0,
+  "evidence_accuracy": {
+    "front": {
+      "accuracy": 0.8405797101449275,
+      "correct": 116,
+      "total": 138
+    },
+    "front-middle": {
+      "accuracy": 0.7865168539325843,
+      "correct": 70,
+      "total": 89
+    },
+    "middle-late": {
+      "accuracy": 0.7662337662337663,
+      "correct": 59,
+      "total": 77
+    },
+    "late": {
+      "accuracy": 0.8181818181818182,
+      "correct": 45,
+      "total": 55
+    }
+  },
+  "elapsed_seconds": 2339.1374320983887,
+  "predictions_file": "/data/jykim/projects/SpeechLM_benchmark/jykim/Ko-Speech-Eval/results_real/LSQA/gpt_realtime_mini/mctest_final_with_audio-add-evidence-7_noise_filtered/lsqa_predictions.jsonl"
+}

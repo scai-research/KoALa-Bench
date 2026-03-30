@@ -1,0 +1,12 @@
+{
+  "dataset": "ksponspeech_eval_other.jsonl",
+  "model": "google/gemma-3n-E4B-it",
+  "total_samples": 3000,
+  "total_cer": 1.463206872912382,
+  "total_edit_distance": 100316,
+  "total_ref_length": 68559,
+  "normalization": "숫자 변형 허용 + 공백 제거",
+  "prompt": "다음 음성을 한국어로 전사해 주시고 설명이나 추가 문장 없이 전사 결과만 제공해 주세요.",
+  "elapsed_time_seconds": 646.0058970451355,
+  "timestamp": "2026-03-06T10:45:26.085344"
+}

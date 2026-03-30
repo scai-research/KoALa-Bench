@@ -1,0 +1,17 @@
+{
+  "dataset": "etri_tst-COMMON_processed.jsonl",
+  "model": "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+  "total_samples": 2532,
+  "tokenize_method": "character",
+  "corpus_bleu": 30.231365599716817,
+  "corpus_bleu1": 57.766420113647186,
+  "corpus_bleu2": 36.42452512204934,
+  "corpus_bleu3": 24.256246855609593,
+  "corpus_bleu4": 16.36583261432269,
+  "avg_bleu": 27.357976702342295,
+  "avg_meteor": 51.59422058297133,
+  "avg_bertscore_f1": 93.36922714636789,
+  "prompt": "다음 문장을 의미를 변경하지 말고 자연스러운 한국어로 번역하시오.",
+  "elapsed_time_seconds": 309.3758099079132,
+  "timestamp": "2026-03-06T02:03:42.363893"
+}

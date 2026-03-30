@@ -1,0 +1,12 @@
+{
+  "accuracy_text": 0.29,
+  "accuracy_speech": 0.89,
+  "correct_text": 29,
+  "correct_speech": 89,
+  "total": 100,
+  "text_correct_and_speech_same": 6,
+  "parametric_proportion": 0.20689655172413793,
+  "elapsed_seconds": 16.731085062026978,
+  "predictions_text": "/data/jykim/projects/SpeechLM_benchmark/jykim/Ko-Speech-Eval/results_real/K-disentQA/qwen/k-sports_other/prompt_v2/predictions_text.jsonl",
+  "predictions_speech": "/data/jykim/projects/SpeechLM_benchmark/jykim/Ko-Speech-Eval/results_real/K-disentQA/qwen/k-sports_other/prompt_v2/predictions_speech.jsonl"
+}

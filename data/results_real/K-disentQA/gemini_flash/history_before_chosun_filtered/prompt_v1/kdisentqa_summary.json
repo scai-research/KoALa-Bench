@@ -1,0 +1,12 @@
+{
+  "accuracy_text": 0.8217821782178217,
+  "accuracy_speech": 0.6633663366336634,
+  "correct_text": 83,
+  "correct_speech": 67,
+  "total": 101,
+  "text_correct_and_speech_same": 26,
+  "parametric_proportion": 0.3132530120481928,
+  "elapsed_seconds": 637.2179181575775,
+  "predictions_text": "/data/jykim/projects/SpeechLM_benchmark/jykim/Ko-Speech-Eval/results_real/K-disentQA/gemini_flash/history_before_chosun_filtered/prompt_v1/predictions_text.jsonl",
+  "predictions_speech": "/data/jykim/projects/SpeechLM_benchmark/jykim/Ko-Speech-Eval/results_real/K-disentQA/gemini_flash/history_before_chosun_filtered/prompt_v1/predictions_speech.jsonl"
+}

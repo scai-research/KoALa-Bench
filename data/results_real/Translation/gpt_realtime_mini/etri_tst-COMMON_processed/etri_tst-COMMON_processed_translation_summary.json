@@ -1,0 +1,17 @@
+{
+  "dataset": "etri_tst-COMMON_processed.jsonl",
+  "model": "gpt-audio-mini",
+  "total_samples": 2532,
+  "tokenize_method": "character",
+  "corpus_bleu": 29.974717049410014,
+  "corpus_bleu1": 57.09912101041133,
+  "corpus_bleu2": 35.98101127044687,
+  "corpus_bleu3": 24.0198013103145,
+  "corpus_bleu4": 16.358676726639583,
+  "avg_bleu": 26.06340955434567,
+  "avg_meteor": 49.374346646882664,
+  "avg_bertscore_f1": 93.10289022717242,
+  "prompt": "이 오디오를 한국어로 번역해 주세요. 번역 결과만 출력하고 다른 텍스트는 출력하지 마세요.",
+  "elapsed_time_seconds": 2733.270353078842,
+  "timestamp": "2026-03-11T03:35:23.301948"
+}

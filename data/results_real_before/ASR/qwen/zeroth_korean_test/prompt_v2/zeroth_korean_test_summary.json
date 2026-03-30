@@ -1,0 +1,12 @@
+{
+  "dataset": "zeroth_korean_test.jsonl",
+  "model": null,
+  "total_samples": 457,
+  "total_cer": 0.2395790128577354,
+  "total_edit_distance": 4621,
+  "total_ref_length": 19288,
+  "normalization": "숫자 변형 허용 + 공백 제거",
+  "prompt": "다음 음성을 한국어로 전사해 주시고 설명이나 추가 문장 없이 전사 결과만 제공해 주세요.",
+  "elapsed_time_seconds": 73.35558128356934,
+  "timestamp": "2026-03-06T06:29:41.746070"
+}

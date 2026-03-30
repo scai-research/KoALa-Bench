@@ -1,0 +1,8 @@
+{
+  "avg_gpt_score": 0.5888888888888886,
+  "total": 557,
+  "scored": 45,
+  "elapsed_seconds": 25.792333364486694,
+  "predictions_file": "/data/jykim/projects/SpeechLM_benchmark/jykim/Ko-Speech-Eval/results_real/Instruct/qwen/kudge/prompt_v1/instruct_predictions.jsonl",
+  "gpt_model": "gpt-4o-mini"
+}

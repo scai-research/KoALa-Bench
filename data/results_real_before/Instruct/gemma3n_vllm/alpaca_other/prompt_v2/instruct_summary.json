@@ -1,0 +1,8 @@
+{
+  "avg_gpt_score": 0.8046376811594202,
+  "total": 69,
+  "scored": 69,
+  "elapsed_seconds": 41.92494821548462,
+  "predictions_file": "/data/jykim/projects/SpeechLM_benchmark/jykim/Ko-Speech-Eval/results_real/Instruct/gemma3n_vllm/alpaca_other/prompt_v2/instruct_predictions.jsonl",
+  "gpt_model": "gpt-4o-mini"
+}

@@ -151,19 +151,7 @@ Ko-Speech_eval/
 - `run_all.sh` (선택이지만 권장)
 
 ---
-
-## 5) 평가 JSONL 기준
-
-현재 저장소에서 평가에 사용되는 JSONL은 아래 스크립트 기준으로 고정되어 있습니다.
-
-- `scripts/evaluation/gemini-flash/*.sh`에서 참조하는 JSONL 전부
-- `scripts/evaluation/eval_ksat.sh`에서 참조하는 JSONL 전부
-
-즉, 위 스크립트에 등장하지 않는 JSONL은 정리 대상이며, 실행 중 필요한 파일은 이미 남겨져 있습니다.
-
----
-
-## 6) 태스크별 실행 엔트리 (Python)
+## 5) 태스크별 실행 엔트리 (Python)
 
 직접 실행이 필요하면 아래 스크립트를 호출하면 됩니다.
 

@@ -1,7 +1,7 @@
 # KoALa-Bench
 
 <p align="center">
-  <img src="assets/main_figure.png" width="80%">
+  <img src="main_figure.png" width="80%">
 </p>
 
 <p align="center">

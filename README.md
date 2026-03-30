@@ -21,20 +21,6 @@
   - **Hugging Face에 업로드된 데이터에서 다운로드**해 사용해야 합니다.
 
 > 정리: `ASR/Translation = 원본 소스에서 직접 다운로드`, `나머지 = Hugging Face 다운로드`
-
-### Data Access Policy (Most Important)
-
-Before running evaluations, note that data sources are split by task:
-
-- `ASR`, `Translation`:
-  - Preprocessing code is included, and datasets must be downloaded directly from the original data creators/providers.
-  - For detailed preprocessing/evaluation usage, check `ASR/README.md` and `Translation/README.md`.
-  - In particular, `ASR/ksponspeech_eval_clean.jsonl` and `ASR/ksponspeech_eval_other.jsonl` are **locally generated preprocessing outputs** and are intentionally git-ignored.
-- Other tasks (`SQA`, `K-SAT`, `PA-QA`, `SCA-QA`, `Instruct`):
-  - Datasets should be downloaded from Hugging Face.
-
-> Summary: `ASR/Translation = original source`, `others = Hugging Face`
-
 ---
 
 ## 1) 빠른 실행
@@ -56,13 +42,6 @@ bash scripts/evaluation/gemini-flash/eval_kdisentqa_3cond.sh
 bash scripts/evaluation/gemini-flash/eval_translation.sh
 bash scripts/evaluation/gemini-flash/eval_instruct.sh
 ```
-
-### K-SAT 별도 실행
-
-```bash
-bash scripts/evaluation/eval_ksat.sh
-```
-
 ---
 
 ## 2) 실행 전 반드시 확인할 것
@@ -76,7 +55,7 @@ bash scripts/evaluation/eval_ksat.sh
 - `MAX_SAMPLES`, `BATCH_SIZE`, `TENSOR_PARALLEL_SIZE`: 실행 규모/자원 설정
 - API 키 파일 사용 시: `gemini_key.txt`, `openai_key.txt` 경로/환경변수 설정
 
-> 참고: 현재 정리 과정에서 루트의 키 파일은 삭제했으므로, 필요하면 다시 생성하거나 환경변수로 직접 주입하세요.
+> 참고: 평가하고자 하는 모델의 추론 코드와 Backend에 추가하여야 합니다.
 
 ---
 
@@ -186,17 +165,12 @@ Ko-Speech_eval/
 - SCA-QA 3조건: `SCA-QA/evaluate_with_original.py`
 - Translation: `Translation/run_translation_evaluation.py`
 - Instruct: `Instruct/evaluate_instruct.py`
-
-공통적으로 `PYTHONPATH`에 `src`가 포함되어야 합니다.
-
-```bash
-export PYTHONPATH="$(pwd)/src:${PYTHONPATH}"
-```
-
 ---
 
 ## 7) 트러블슈팅
 
+- Audio Missing
+  - 오디오가 다운받아졌는지, jsonl파일의 경로와 일치하는지 확인해야 합니다
 - `JSONL not found`:
   - 스크립트의 `BASE_PATH`가 현재 경로와 다를 가능성이 큽니다.
   - `INPUT_JSONL` 경로 구성 로직을 확인하세요.
@@ -205,8 +179,7 @@ export PYTHONPATH="$(pwd)/src:${PYTHONPATH}"
   - 백엔드 구현 파일 import 에러 확인
 - Instruct 평가 실패:
   - OpenAI API 키 설정 확인 (`OPENAI_API_KEY` 또는 키 파일)
-- OOM:
-  - `BATCH_SIZE`를 1로 낮추고 `MAX_SAMPLES`로 샘플 제한 후 점진적으로 확대
+
 
 ## 데이터 고지
 
@@ -214,69 +187,6 @@ export PYTHONPATH="$(pwd)/src:${PYTHONPATH}"
 - 데이터가 필요한 경우 원본 제작자에게 직접 요청해야 합니다.
 
 ---
-
-## English
-
-This repository is a Korean speech / multimodal evaluation framework.
-
-It provides task-specific JSONL inputs and shared inference backends registered in `src/backends.py`. Each evaluation task has its own Python entrypoint and is typically launched via shell scripts under `scripts/evaluation/`.
-
-### Quick Start (Gemini Flash)
-
-Run all tasks:
-```bash
-bash scripts/evaluation/gemini-flash/run_all.sh
-```
-
-Run 1 sample per task (recommended for debugging missing paths / `raw` audio issues):
-```bash
-bash scripts/evaluation/gemini-flash/run_all_1sample.sh
-```
-
-Task-by-task:
-```bash
-bash scripts/evaluation/gemini-flash/eval_asr.sh
-bash scripts/evaluation/gemini-flash/eval_sqa.sh
-bash scripts/evaluation/gemini-flash/eval_lsqa.sh
-bash scripts/evaluation/gemini-flash/eval_kdisentqa.sh
-bash scripts/evaluation/gemini-flash/eval_kdisentqa_3cond.sh
-bash scripts/evaluation/gemini-flash/eval_translation.sh
-bash scripts/evaluation/gemini-flash/eval_instruct.sh
-```
-
-### Smoke Test (Path Check Only)
-
-```bash
-bash scripts/evaluation/gemini-flash/smoke_test_paths.sh
-```
-
-### Before Running
-
-1. Update variables at the top of each `scripts/evaluation/**/eval_*.sh`:
-   - `BASE_PATH`: absolute path to this project on your machine
-   - `BACKEND`: backend name (e.g. `gemini_flash`)
-   - `MODEL_PATH`: model identifier/path (backend-specific)
-   - `PROMPT_FILE`, `PROMPT_NAME`
-   - `MAX_SAMPLES`, `BATCH_SIZE`, `TENSOR_PARALLEL_SIZE`
-2. Set Gemini API key:
-   - either `export GEMINI_API_KEY=...`
-   - or create `gemini_key.txt` at the project root (excluded by `.gitignore`)
-
-### Adding a New Backend
-
-1. Implement `<ModelName>_inference.py` under `src/` with the required inference interface.
-2. Register the backend name in `src/backends.py`.
-3. Add/duplicate shell scripts under `scripts/evaluation/<your-family>/` to wire `BACKEND`, `MODEL_PATH`, and JSONL benchmarks.
-
-### Important Note about Audio
-
-Even if JSONL files and scripts are correct, inference requires the audio files referenced by the `raw` fields inside the JSONL. If those audio files are missing, evaluations will fail or skip samples.
-
-### Data Availability Notice
-
-- This repository focuses on evaluation code/scripts and does not imply redistribution rights for the data.
-- If you need the data, please contact the original creators directly.
-
 
 ## Licensing
 

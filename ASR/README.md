@@ -47,6 +47,8 @@ AI Hub에서 공개한 대규모 한국어 자발적 발화 데이터셋입니�
 전사 텍스트에 포함된 영어 약어(예: `TV`, `SKT`, `OT`)는 `--split clean|other` 지정 시 한국어 발음으로 자동 치환됩니다.
 입력 형식: TRN 파일 (`eval_clean.trn`, `eval_other.trn`) + PCM 오디오 파일 (→ WAV 변환 필요)
 
+📥 **다운로드**: [https://www.aihub.or.kr/](https://www.aihub.or.kr/) 에서 "한국어 음성"으로 검색
+
 ### Common Voice
 
 Mozilla의 Common Voice Scripted Speech 25.0 - Korean 데이터셋입니다. 다양한 화자가 참여한 크라우드소싱 음성 데이터로 구성되어 있습니다.

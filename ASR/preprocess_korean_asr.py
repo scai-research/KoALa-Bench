@@ -14,6 +14,7 @@ import os
 import json
 import re
 import argparse
+import array
 import struct
 import wave
 from pathlib import Path
@@ -100,10 +101,13 @@ def convert_flac_to_wav(flac_path: str, wav_path: str) -> bool:
     if MINIAUDIO_AVAILABLE:
         try:
             decoded = miniaudio.decode_file(flac_path, output_format=miniaudio.SampleFormat.SIGNED16)
-            samples = np.frombuffer(decoded.samples, dtype=np.int16)
+            samples = array.array('h', decoded.samples)
 
             if decoded.nchannels == 2:
-                samples = samples.reshape(-1, 2).mean(axis=1).astype(np.int16)
+                mono = array.array('h')
+                for i in range(0, len(samples), 2):
+                    mono.append((samples[i] + samples[i + 1]) // 2)
+                samples = mono
 
             with wave.open(wav_path, 'wb') as wav_file:
                 wav_file.setnchannels(1)
@@ -126,44 +130,71 @@ def convert_mp3_to_wav(mp3_path: str, wav_path: str) -> bool:
     MP3 파일을 WAV로 변환
     
     우선순위:
-    1. miniaudio (ffmpeg 불필요)
-    2. pydub (ffmpeg 필요)
+    1. soundfile (libsndfile >= 1.1.0, numpy 포함)
+    2. miniaudio (ffmpeg 불필요)
+    3. pydub (ffmpeg 필요)
     """
     os.makedirs(os.path.dirname(wav_path), exist_ok=True)
-    
-    # 방법 1: miniaudio 사용 (ffmpeg 불필요)
+
+    # 방법 1: soundfile 사용 (libsndfile >= 1.1.0에서 MP3 지원)
+    if SOUNDFILE_AVAILABLE:
+        try:
+            data, samplerate = sf.read(mp3_path)
+
+            if len(data.shape) > 1:
+                data = data.mean(axis=1)
+
+            if samplerate != 16000:
+                original_length = len(data)
+                target_length = int(original_length * 16000 / samplerate)
+                indices = np.linspace(0, original_length - 1, target_length)
+                data = np.interp(indices, np.arange(original_length), data)
+
+            sf.write(wav_path, data, 16000, subtype='PCM_16')
+            return True
+
+        except Exception as e:
+            print(f"MP3→WAV 변환 오류 (soundfile) [{mp3_path}]: {e}")
+
+    # 방법 2: miniaudio 사용 (ffmpeg 불필요)
     if MINIAUDIO_AVAILABLE:
         try:
-            # MP3 디코딩
             decoded = miniaudio.decode_file(mp3_path, output_format=miniaudio.SampleFormat.SIGNED16)
-            samples = np.frombuffer(decoded.samples, dtype=np.int16)
-            
-            # Stereo → Mono 변환
+            samples = array.array('h', decoded.samples)
+
             if decoded.nchannels == 2:
-                samples = samples.reshape(-1, 2).mean(axis=1).astype(np.int16)
-            
-            # 16kHz 리샘플링 (필요시)
+                mono = array.array('h')
+                for i in range(0, len(samples), 2):
+                    mono.append((samples[i] + samples[i + 1]) // 2)
+                samples = mono
+
             if decoded.sample_rate != 16000:
-                # 간단한 리샘플링 (선형 보간)
                 original_length = len(samples)
                 target_length = int(original_length * 16000 / decoded.sample_rate)
-                indices = np.linspace(0, original_length - 1, target_length)
-                samples = np.interp(indices, np.arange(original_length), samples).astype(np.int16)
-            
-            # WAV로 저장
+                resampled = array.array('h')
+                for i in range(target_length):
+                    pos = i * (original_length - 1) / (target_length - 1) if target_length > 1 else 0
+                    idx = int(pos)
+                    frac = pos - idx
+                    if idx + 1 < original_length:
+                        val = int(samples[idx] * (1 - frac) + samples[idx + 1] * frac)
+                    else:
+                        val = samples[idx]
+                    resampled.append(max(-32768, min(32767, val)))
+                samples = resampled
+
             with wave.open(wav_path, 'wb') as wav_file:
                 wav_file.setnchannels(1)
                 wav_file.setsampwidth(2)
                 wav_file.setframerate(16000)
                 wav_file.writeframes(samples.tobytes())
-            
+
             return True
-            
+
         except Exception as e:
             print(f"MP3→WAV 변환 오류 (miniaudio) [{mp3_path}]: {e}")
-            # miniaudio 실패 시 pydub 시도
-    
-    # 방법 2: pydub 사용 (ffmpeg 필요)
+
+    # 방법 3: pydub 사용 (ffmpeg 필요)
     if PYDUB_AVAILABLE:
         try:
             audio = AudioSegment.from_mp3(mp3_path)
@@ -175,7 +206,7 @@ def convert_mp3_to_wav(mp3_path: str, wav_path: str) -> bool:
             print(f"MP3→WAV 변환 오류 (pydub) [{mp3_path}]: {e}")
             return False
 
-    print(f"오류: MP3 변환 라이브러리가 없습니다. 'pip install miniaudio' 또는 'pip install pydub' + ffmpeg 설치 필요")
+    print(f"오류: MP3 변환 라이브러리가 없습니다. 'pip install soundfile' 또는 'pip install miniaudio' 또는 'pip install pydub' + ffmpeg 설치 필요")
     return False
 
 

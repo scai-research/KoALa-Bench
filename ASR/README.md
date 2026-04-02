@@ -27,7 +27,7 @@ ASR/
            (question_ko) (prediction) (CER)
 ```
 
-1. **전처리**: KsponSpeech TRN 파일을 통합 JSONL로 변환 (Common Voice / Zeroth Korean은 HuggingFace에서 전처리 완료된 파일 제공)
+1. **전처리**: KsponSpeech / Common Voice 원본 파일을 통합 JSONL로 변환 (Zeroth Korean은 HuggingFace에서 전처리 완료된 파일 제공)
 2. **추론**: `../src/run_inference.sh`를 사용하여 음성인식 수행
 3. **평가**: 추론 결과와 Ground truth를 비교하여 CER 계산
 
@@ -37,7 +37,7 @@ ASR/
 
 > ⚠️ **라이선스 안내**: 아래 데이터셋들의 모든 권한은 각 데이터셋 제작자에게 있습니다. 본 프로젝트는 **전처리 및 평가 코드만 제공**하며, 데이터셋 사용 시 원본 라이선스를 반드시 확인하시기 바랍니다.
 >
-> 📋 **참고**: KsponSpeech는 전처리가 필요하며, Common Voice / Zeroth Korean은 HuggingFace에서 전처리된 파일을 다운로드하여 사용합니다.
+> 📋 **참고**: KsponSpeech와 Common Voice는 각 사이트에서 직접 다운로드 후 전처리가 필요하며, Zeroth Korean은 HuggingFace에서 전처리된 파일을 다운로드하여 사용합니다.
 
 ### KsponSpeech
 
@@ -47,9 +47,19 @@ AI Hub에서 공개한 대규모 한국어 자발적 발화 데이터셋입니�
 전사 텍스트에 포함된 영어 약어(예: `TV`, `SKT`, `OT`)는 `--split clean|other` 지정 시 한국어 발음으로 자동 치환됩니다.
 입력 형식: TRN 파일 (`eval_clean.trn`, `eval_other.trn`) + PCM 오디오 파일 (→ WAV 변환 필요)
 
-### Common Voice / Zeroth Korean
+### Common Voice
 
-Common Voice(Mozilla)와 Zeroth Korean 데이터셋은 전처리된 JSONL 및 오디오 파일을 HuggingFace에서 제공합니다.
+Mozilla의 Common Voice Scripted Speech 25.0 - Korean 데이터셋입니다. 다양한 화자가 참여한 크라우드소싱 음성 데이터로 구성되어 있습니다.
+**test** 스플릿을 사용하며, Mozilla Data Collective에서 직접 다운로드한 뒤 전처리가 필요합니다.
+입력 형식: TSV 파일 (`test.tsv`) + MP3 오디오 파일 (→ WAV 변환 필요)
+
+📥 **다운로드**: [https://datacollective.mozillafoundation.org/](https://datacollective.mozillafoundation.org/)
+
+> 다운로드 후 `clips/` 폴더에 MP3 오디오 파일들이, 루트에 `test.tsv` 파일이 위치합니다.
+
+### Zeroth Korean
+
+Zeroth Korean 데이터셋은 전처리된 JSONL 및 오디오 파일을 HuggingFace에서 제공합니다.
 별도의 전처리 없이 다운로드 후 바로 추론 및 평가에 사용할 수 있습니다.
 
 📥 **다운로드**: [https://huggingface.co/datasets/YOUR_ORG/ko-speech-eval-benchmark](https://huggingface.co/datasets/YOUR_ORG/ko-speech-eval-benchmark)
@@ -58,13 +68,17 @@ Common Voice(Mozilla)와 Zeroth Korean 데이터셋은 전처리된 JSONL 및 �
 
 ## 🚀 Step 1: 데이터 전처리
 
-KsponSpeech는 원본 TRN + PCM 파일로부터 전처리가 필요합니다.
-Common Voice와 Zeroth Korean은 위 HuggingFace 링크에서 전처리 완료된 파일을 다운로드하면 됩니다.
+KsponSpeech와 Common Voice는 원본 파일로부터 전처리가 필요합니다.
+Zeroth Korean은 위 HuggingFace 링크에서 전처리 완료된 파일을 다운로드하면 됩니다.
 
 ### 사용법
 
 ```bash
+# KsponSpeech
 ./run_preprocess.sh ksponspeech <trn_path> <audio_root> <wav_output_dir> <output.jsonl> [clean|other]
+
+# Common Voice
+./run_preprocess.sh commonvoice <tsv_path> <audio_root> <wav_output_dir> <output.jsonl>
 ```
 
 ### 예시
@@ -85,9 +99,31 @@ Common Voice와 Zeroth Korean은 위 HuggingFace 링크에서 전처리 완료�
   ./output/ksponspeech_wav \
   ./output/ksponspeech_eval_other.jsonl \
   other
+
+# Common Voice test (mp3 → wav 변환)
+./run_preprocess.sh commonvoice \
+  /path/to/cv-corpus-xx-ko/test.tsv \
+  /path/to/cv-corpus-xx-ko/clips \
+  ./output/commonvoice_wav \
+  ./output/commonvoice_test.jsonl
 ```
 
-### 영어→한국어 발음 자동 치환
+### Common Voice 전처리 상세
+
+Common Voice 데이터셋은 Mozilla 사이트에서 다운로드한 `test.tsv` 파일과 `clips/` 폴더의 MP3 오디오 파일을 사용합니다.
+전처리 시 MP3 → WAV (16kHz, mono, 16bit) 변환이 자동으로 수행됩니다.
+
+| 인자 | 설명 |
+|------|------|
+| `tsv_path` | Common Voice `test.tsv` 파일 경로 |
+| `audio_root` | MP3 오디오 파일이 있는 `clips/` 디렉토리 경로 |
+| `wav_output_dir` | 변환된 WAV 파일 저장 디렉토리 |
+| `output.jsonl` | 출력 JSONL 파일 경로 |
+
+> ⚠️ MP3 변환에는 `soundfile` 또는 `miniaudio` 또는 `pydub` + `ffmpeg`가 필요합니다.
+> `pip install soundfile` 권장 (libsndfile >= 1.1.0에서 MP3 지원).
+
+### 영어→한국어 발음 자동 치환 (KsponSpeech)
 
 KsponSpeech 전사 텍스트에는 영어 약어/단어가 포함된 경우가 있습니다 (예: `TV`→티비, `SKT`→에스케이티, `OT`→오티).
 `--split clean` 또는 `--split other`를 지정하면, 스크립트 내부에 사전 정의된 매핑 테이블에 따라
@@ -221,7 +257,7 @@ ASR 모델이 구두점을 생략하거나 삽입하는 차이가 CER에 반영�
 ```bash
 # 현재 위치: Ko-Speech-Eval/ASR
 
-# 1. 전처리 (KsponSpeech eval_clean, 영어→한국어 자동 매핑)
+# 1-1. 전처리 (KsponSpeech eval_clean, 영어→한국어 자동 매핑)
 ./run_preprocess.sh ksponspeech \
   /data/KsponSpeech_eval/eval_clean.trn \
   /data/KsponSpeech_eval/eval_clean \
@@ -236,6 +272,13 @@ ASR 모델이 구두점을 생략하거나 삽입하는 차이가 CER에 반영�
   ./output/ksponspeech_wav \
   ./output/ksponspeech_eval_other.jsonl \
   other
+
+# 1-3. 전처리 (Common Voice test, mp3 → wav 변환)
+./run_preprocess.sh commonvoice \
+  /data/cv-corpus-xx-ko/test.tsv \
+  /data/cv-corpus-xx-ko/clips \
+  ./output/commonvoice_wav \
+  ./output/commonvoice_test.jsonl
 
 # 2. 추론
 cd ../src

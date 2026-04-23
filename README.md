@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://arxiv.org/abs/xxxx.xxxxx"><img src="https://img.shields.io/badge/Paper-arXiv-red"></a>
+  <a href="https://arxiv.org/abs/2604.19782"><img src="https://img.shields.io/badge/Paper-arXiv-red"></a>
   <a href="https://huggingface.co/datasets/scailaboratory/KoALA"><img src="https://img.shields.io/badge/🤗-HuggingFace-yellow"></a>
   <a href="http://huggingface.co/spaces/scailaboratory/KoALa-Bench"><img src="https://img.shields.io/badge/🏆-Leaderboard-blue"></a>
 </p>

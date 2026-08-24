@@ -10,7 +10,13 @@
   <a href="http://huggingface.co/spaces/scailaboratory/KoALa-Bench"><img src="https://img.shields.io/badge/🏆-Leaderboard-blue"></a>
 </p>
 
-한국어 음성 기반 모델 평가 저장소입니다.  
+## News
+
+- **[2026.08]** 🎉 KoALa-Bench is accepted to **EMNLP 2026 Main Conference**!
+- **[2026.04]** Paper released on arXiv.
+- **[2026.04]** Dataset released on huggingface.
+  
+# 한국어 음성 기반 모델 평가 저장소입니다.  
 
 - 지원 태스크: `ASR`, `SQA`, `K-SAT`, `LSQA`, `K-disentQA`, `Translation`, `Instruct`
 - 공통 구조: 각 태스크의 `*.py` 평가 스크립트 + 평가용 `*.jsonl`

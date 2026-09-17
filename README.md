@@ -309,5 +309,12 @@ Please also cite the original datasets used in KoALa-Bench:
 If you use KoALa-Bench in your research, please cite:
 
 ```bibtex
-----
+@inproceedings{
+anonymous2026koalabench,
+title={Ko{AL}a-Bench: Evaluating Large Audio Language Models on Korean Speech Understanding and Faithfulness},
+author={Anonymous},
+booktitle={The 2026 Conference on Empirical Methods in Natural Language Processing},
+year={2026},
+url={https://openreview.net/forum?id=EOOup3zokR}
+}
 ```
